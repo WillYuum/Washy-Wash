@@ -1,6 +1,6 @@
 import React from 'react'
 
-class CreateMyOrder extends Component {
+class CreateMyOrder extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

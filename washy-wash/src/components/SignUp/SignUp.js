@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SignUp extends Component {
+class SignUp extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

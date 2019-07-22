@@ -1,6 +1,6 @@
 import React from 'react'
 
-class NavigationBar extends Component {
+class NavigationBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -10,7 +10,7 @@ class NavigationBar extends Component {
     render() { 
         return ( 
             <div>
-                
+                <h1>Hello</h1>
             </div>
          );
     }

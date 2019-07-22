@@ -1,6 +1,6 @@
 import React from 'react'
 
-class ViewOrders extends Component {
+class ViewOrders extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

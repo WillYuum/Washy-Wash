@@ -1,6 +1,6 @@
 import React from 'react'
 
-class OrderDetail extends Component {
+class OrderDetail extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

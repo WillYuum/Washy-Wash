@@ -1,8 +1,14 @@
 import React from 'react';
 import "./landingpage.css";
 
+import NavigationBar from "../../components/NavigationBar/NavigationBar"
+import Hero from "../../components/Hero/Hero"
+import HowWeWork from "../../components/HowWeWork/HowWeWork"
+import Services from "../../components/Services/Services"
+import Footer from "../../components/Footer/Footer"
 
-class LandingPage extends Component {
+
+class LandingPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -12,7 +18,11 @@ class LandingPage extends Component {
     render() { 
         return ( 
             <div>
-
+                <NavigationBar />
+                <Hero />
+                <HowWeWork />
+                <Services />
+                <Footer />
             </div>
          );
     }

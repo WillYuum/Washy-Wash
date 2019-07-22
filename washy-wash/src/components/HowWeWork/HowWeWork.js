@@ -1,6 +1,6 @@
 import React from 'react'
 
-class HowWeWork extends Component {
+class HowWeWork extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

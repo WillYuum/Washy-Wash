@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Services extends Component {
+class Services extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
