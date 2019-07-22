@@ -1,6 +1,6 @@
 import React from 'react'
 
-class CreateMyOrder extends React.Component {
+class MyOrders extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -16,4 +16,4 @@ class CreateMyOrder extends React.Component {
     }
 }
  
-export default CreateMyOrder;
+export default MyOrders;
