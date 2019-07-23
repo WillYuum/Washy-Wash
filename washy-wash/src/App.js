@@ -13,10 +13,10 @@ class App extends React.Component {
   render() { 
     return (  
       <div>
-        <MyOrders />
+        {/* <MyOrders /> */}
         {/* <ViewOrders /> */}
-        {/* <LandingPage />
-        CMS */}
+         <LandingPage /> 
+        {/* CMS */}
       </div>
     );
   }

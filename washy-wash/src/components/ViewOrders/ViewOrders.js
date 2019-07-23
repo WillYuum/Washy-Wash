@@ -4,7 +4,6 @@ import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import Card from 'react-bootstrap/Card'
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { BrowserRouter, Route, Link } from "react-router-dom"
 import "./ViewOrders.css"
 class ViewOrders extends React.Component {
     constructor(props) {
@@ -61,4 +60,4 @@ class ViewOrders extends React.Component {
         );
     }
 }
-export default ViewOrder;
+export default ViewOrders;

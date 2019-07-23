@@ -33,15 +33,16 @@ class NavigationBar extends React.Component {
       
     </Nav>
     <Form inline>
-    <Button className="dropnav"  variant="outline-success" size="sm">  <NavDropdown title="profile" id="basic-nav-dropdown">
+    
+      {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
+      <Button variant="outline-success" size="lg">Contact Us</Button>
+      <Button className="dropnav"  variant="outline-success" size="sm">  <NavDropdown title="profile" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">My ordars</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
         <NavDropdown.Divider />
         {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
       </NavDropdown></Button>
-      {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
-      <Button variant="outline-success" size="lg">Contact Us</Button>
     </Form>
   </Navbar.Collapse>
 </Navbar>
