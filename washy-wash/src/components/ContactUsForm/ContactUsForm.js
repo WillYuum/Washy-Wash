@@ -1,19 +1,10 @@
 import React from 'react'
 
-class ContactUsForm extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
+export default function ContactUsForm() {
+    return (
+        <div>
 
-         }
-    }
-    render() { 
-        return ( 
-            <div>
-                
-            </div>
-         );
-    }
+        </div>
+    );
+
 }
- 
-export default ContactUsForm;

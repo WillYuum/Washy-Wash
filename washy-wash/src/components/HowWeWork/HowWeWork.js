@@ -1,19 +1,13 @@
 import React from 'react'
 
-class HowWeWork extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
+const HowWeWork = () => {
+    return ( 
+        <div>
 
-         }
-    }
-    render() { 
-        return ( 
-            <div>
-                
-            </div>
-         );
-    }
+        </div>
+     );
 }
+ 
+
  
 export default HowWeWork;

@@ -15,5 +15,15 @@ class Services extends React.Component {
          );
     }
 }
+
+const Services = () => {
+    return ( 
+        <div>
+            
+        </div>
+     );
+}
+ 
+export default Services;
  
 export default Services;

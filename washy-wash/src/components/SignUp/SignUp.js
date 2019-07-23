@@ -16,4 +16,14 @@ class SignUp extends React.Component {
     }
 }
  
+const SignUp = () => {
+    return ( 
+        <div>
+            
+        </div>
+     );
+}
+ 
+export default SignUp;
+
 export default SignUp;
