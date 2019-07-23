@@ -1,0 +1,11 @@
+.orderDetails {
+    width:330px;
+    height:420px;
+    background-color: grey;
+}
+
+.orderDetails-list {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

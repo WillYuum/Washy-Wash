@@ -1,5 +1,9 @@
 import React from 'react';
 import LandingPage from "./Pages/LandingPage/landingPage"
+import ViewOrders from "./components/ViewOrders/ViewOrders"
+import MyOrders from './Pages/MyOrders/MyOrders';
+
+import ContactUsForm from "./components/ContactUsForm/ContactUsForm"
 
 class App extends React.Component {
   constructor(props) {
@@ -9,8 +13,10 @@ class App extends React.Component {
   render() { 
     return (  
       <div>
-        <LandingPage />
-        {/*CMS*/}
+        <MyOrders />
+        {/* <ViewOrders /> */}
+        {/* <LandingPage />
+        CMS */}
       </div>
     );
   }
