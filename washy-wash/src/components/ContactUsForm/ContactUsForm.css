@@ -1,0 +1,70 @@
+.ContactUsForm-Container{
+    width:100vw;
+    height: 100vh;
+    background-color:lightblue;
+}
+
+.ContactUsForm-box{
+    background-image: linear-gradient(45deg,#445090,#3E839F);
+    width:42%;
+    margin:10px auto;
+}
+
+.ContactUsForm-MainTitle{
+    text-align: center;
+    color:white;
+}
+
+.ContactUsForm-MainTitle--text{
+    margin:0 5%;
+}
+
+.ContactUsForm-first-Text{
+    font-size:55px;
+    font-weight: 100;
+}
+
+.ContactUsForm-Second-Text{
+    font-weight: 100;
+    width:70%;
+    margin:20px auto;
+}
+
+form{
+    color:white;
+    width:60%;
+    margin: 0 auto;
+}
+
+.ContactUsForm-form{
+    margin-top:20px;
+}
+
+.ContactUsForm-name_form p,
+.ContactUsForm-email_form p,
+.ContactUsForm-textarea_form p
+{
+    font-size:12px;
+    margin:5px 0;    
+}
+
+input{
+    width:100%;
+    height:35px;
+}
+
+
+textarea{
+    height:60px;
+    width:100%;
+    max-width: 100%;
+    min-width: 100%;;
+}
+
+
+.ContactUsForm-Send{
+    height:35px;
+    margin: 15px 0 25px 0;
+    background-color:#0087D1;
+    border-style:none;
+}
