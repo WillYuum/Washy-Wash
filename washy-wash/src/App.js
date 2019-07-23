@@ -1,6 +1,8 @@
 import React from 'react';
 import LandingPage from "./Pages/LandingPage/landingPage"
 
+import ContactUsForm from "./components/ContactUsForm/ContactUsForm"
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,7 @@ class App extends React.Component {
       <div>
         <LandingPage />
         {/*CMS*/}
+      <ContactUsForm />
       </div>
     );
   }
