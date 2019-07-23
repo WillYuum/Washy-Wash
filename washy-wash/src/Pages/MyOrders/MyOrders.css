@@ -1,0 +1,11 @@
+.myOrders {
+    background-color: rgb(54, 131, 231);
+    
+}
+
+.myOrders-body {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    background-color: rgb(25, 138, 158);
+}
