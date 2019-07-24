@@ -15,7 +15,7 @@ class App extends React.Component {
   render() { 
     return (  
       <div>
-        {/* <ContactUs /> */}
+        <ContactUs />
         {/* <MyOrders /> */}
         {/* <ViewOrders /> */}
          {/* <LandingPage />  */}

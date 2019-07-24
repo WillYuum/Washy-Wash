@@ -1,0 +1,35 @@
+.ContactUsForm-Container {
+  background-image: linear-gradient(to top, #00ccff, #0066ff);
+  max-width: 40vw;
+  margin: 100px auto;
+  padding: 20px;
+  
+ *{
+   margin:0;
+ }
+  h2{
+    text-align: center;
+    color: White; 
+  }
+
+  .form-label {
+    color: White;
+    margin:0;
+  }
+  .form-row {
+      padding:10px 30px;
+  }
+
+  .text-muted{
+    color:white !important;
+  }
+
+  textarea{
+    border-radius: 5px;
+    width:100%;
+  }
+
+  button{
+    width:100%;
+  }
+}
