@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Services.css"
-<<<<<<< HEAD
 servicesList=
 [
     {ID:1 , Photo:"https://www.ghanayello.com/img/gh/h/1500992537-57-k-a-cleaning-and-laundry-services.jpg", Title:first, Price:5},
@@ -12,10 +11,8 @@ servicesList=
     {ID:1 , Photo:"http://www.benchmarkcleaning.ca/resources/Cleaning-breakdown.png", Title:first, Price:5},
    
 ]
-=======
 
 import ServiceBox from "./ServicesBox/ServiceBox.js"
->>>>>>> ad1fb14484468b5122575cd9ab94b74e680bb827
 
 
 const Services = () => {
