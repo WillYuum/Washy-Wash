@@ -8,12 +8,14 @@ import ContactUs from "./Pages/Contact-Us/ContactUs.js"
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+      
+     }
   }
   render() { 
     return (  
       <div>
-        <ContactUs />
+        {/* <ContactUs /> */}
         {/* <MyOrders /> */}
         {/* <ViewOrders /> */}
          <LandingPage /> 

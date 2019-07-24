@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Services.css"
+<<<<<<< HEAD
 servicesList=
 [
     {ID:1 , Photo:"https://www.ghanayello.com/img/gh/h/1500992537-57-k-a-cleaning-and-laundry-services.jpg", Title:first, Price:5},
@@ -11,12 +12,18 @@ servicesList=
     {ID:1 , Photo:"http://www.benchmarkcleaning.ca/resources/Cleaning-breakdown.png", Title:first, Price:5},
    
 ]
+=======
+
+import ServiceBox from "./ServicesBox/ServiceBox.js"
+>>>>>>> ad1fb14484468b5122575cd9ab94b74e680bb827
 
 
 const Services = () => {
     return ( 
-        <div>
-
+        <div className = "Services-container">
+            <ServiceBox clothImg = "https://www.rd.com/wp-content/uploads/2018/02/01_Lights_Laundry-Mistakes-You-Didn%E2%80%99t-Know-You-Were-Making_478483900_Evgeny-Atamanenko-760x506.jpg"
+                        clothType = "Pants"
+                        clothPrice = "$12" />
         </div>
      );
 }
