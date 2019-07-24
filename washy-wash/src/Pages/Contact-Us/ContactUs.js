@@ -1,6 +1,8 @@
 import React from 'react'
 import "./ContactUs.css"
 
+import ContactUsForm from "../../components/ContactUsForm/ContactUsForm.js"
+
 class ContactUs extends React.Component {
     constructor(props) {
         super(props);
@@ -10,8 +12,8 @@ class ContactUs extends React.Component {
     }
     render() { 
         return ( 
-            <div>
-                
+            <div className = "ContactUsForm-container">
+                {/* <ContactUsForm /> */}
             </div>
          );
     }

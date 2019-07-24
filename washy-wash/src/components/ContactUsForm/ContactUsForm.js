@@ -18,23 +18,23 @@ class ContactUsForm extends React.Component {
                 and we'll respond as soon as possible
               </p>
             </div>
-            <form>
+            <form className = "ContactUsForm-MainForm">
               <div className=" ContactUsForm-form ContactUsForm-name_form">
                 <p>Name*</p>
-                <input type="text" id="name" required />
+                <input className = "ContactUsForm-input" type="text" id="name" required />
               </div>
               <div className=" ContactUsForm-form ContactUsForm-email_form">
                 <p>Email*</p>
-                <input type="email" id="email" required />
+                <input className = "ContactUsForm-input" type="email" id="email" required />
               </div>
               <div className="ContactUsForm-form ContactUsForm-textarea_form">
                   <p>Message</p>
-                <textarea
+                <textarea className = "ContactUsForm-textarea"
                   rows="4"
                   cols="150"
                 />
               </div>
-              <input className="ContactUsForm-Send" value ="Send Message" type="submit" />
+              <input  className="ContactUsForm-Send ContactUsForm-input" value ="Send Message" type="submit" />
             </form>
     
         </div>
