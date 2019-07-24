@@ -1,0 +1,16 @@
+.ServicesBox-container{
+    width:300px;
+    margin-top:20px;
+}
+
+.ServicesBox-imgSection{
+    width:100%;
+}
+
+.ServicesBox-img{
+    width:100%;
+}
+
+.Services-body{
+    text-align: center;
+}
