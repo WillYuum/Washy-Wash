@@ -3,6 +3,14 @@ import "./Services.css"
 
 import ServiceBox from "./ServicesBox/ServiceBox.js"
 
+/**
+ * Props for Services-Box model
+ * 
+ * @prop {string} clothImg -Cloth Image
+ * @prop  {string}  clothType -The name of the Cloth
+ * @prop {integer} clothPrice = the price of cloth
+ * 
+ */
 
 const Services = () => {
     return ( 
