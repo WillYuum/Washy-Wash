@@ -1,1 +1,8 @@
 
+
+.ContactUsForm-container{
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(to top, #0066ff, #00ccff);
+    padding:1px;
+}

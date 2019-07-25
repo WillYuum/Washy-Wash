@@ -1,29 +1,31 @@
 import React from 'react';
 import LandingPage from "./Pages/LandingPage/landingPage"
-import ViewOrders from "./components/ViewOrders/ViewOrders"
+
 import MyOrders from './Pages/MyOrders/MyOrders';
 
 import ContactUs from "./Pages/Contact-Us/ContactUs.js"
 
+import NavigationBar from "./components/NavigationBar/NavigationBar.js"
+import Footer from "./components/Footer/Footer.js"
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      
-     }
+    this.state = {
+
+    }
   }
-  render() { 
-    return (  
+  render() {
+    return (
       <div>
-        {/* <ContactUs /> */}
-        {/* <MyOrders /> */}
-        {/* <ViewOrders /> */}
-         <LandingPage /> 
+        
+        
+        <LandingPage /> 
         {/* CMS */}
+     
       </div>
     );
   }
 }
- 
+
 export default App;
 

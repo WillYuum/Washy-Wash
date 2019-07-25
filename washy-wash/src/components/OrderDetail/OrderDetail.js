@@ -1,48 +1,53 @@
 import React from 'react'
 import "./OrderDetail.css"
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button' 
-// import StarRatings from '.react-star-ratings';
-class OrderDetail extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
+import { Button, ListGroupItem, Form, ListGroup, Card } from 'react-bootstrap';
+// import StarRatingComponent from 'react-star-rating-component';
+// import Rater from 'react-rater';
+// import 'react-rater/lib/react-rater.css';
 
-         }
-    }
-    render() { 
-        return ( 
-            <div className="orderDetails">
-               
-                <Card className="orderDetails-card">
-                                <h1> Order Details </h1>
-                                <ListGroup variant="flush" className="orderDetails-list" >
-                                    <ListGroup.Item >Create Time:</ListGroup.Item>
-                                    <ListGroup.Item>ITEMS</ListGroup.Item>
-                                    <ListGroup.Item>STATUS:</ListGroup.Item>
-                                    <ListGroup.Item>PRICE:</ListGroup.Item>
-                                    <br></br>
-                                    <hr></hr>
-                                    <Form className="orderDetails-form">
-                                        <Form.Label name="message" >Add your Feedback</Form.Label>
-                                        <Form.Control as="textarea" rows="4" name="message" />
-                                    </Form>
-                                        {/* <StarRatings
-                                        rating={this.state.rating}
-                                        starRatedColor="blue"
-                                        changeRating={this.changeRating}
-                                        numberOfStars={6}
-                                        name='rating'
-                                        /> */}
-                                         <br/><Button variant="light" >Submit</Button>
-                                </ListGroup>
-                            
-                        </Card>
+
+class OrderDetails extends React.Component {
+    state = {}
+    render() {
+        return (
+            <div>
+                <Card style={{ width: '20rem' }} >
+                    <Card.Body className="OrderDetails-CardBody">
+                        <div className="OrderDetails-CardHeader">
+                            <Card.Title>Order Details</Card.Title>
+                            <Card.Text> CREATE TIME: <br></br> 23/7/2019 </Card.Text>
+                        </div>
+                        <Card.Text> ITEMS:
+
+    </Card.Text>
+                        <Card.Text> STATUS: Pending</Card.Text>
+                        <Card.Text> PRICE: 20$</Card.Text>
+                        <hr></hr>
+                        <div className="OrderDetails-Rater">
+                            {/* <Rater total={5} rating={0} /> */}
+                        </div>
+                        <div>
+                            <Form>
+                                <Form.Group controlId="exampleForm.ControlTextarea1">
+                                    <Form.Label></Form.Label>
+                                    <Form.Control as="textarea" rows="3" />
+                                </Form.Group>
+                                <div className="OrderDetails-FormSubmit">
+                                    <Button variant="primary" type="submit" >
+                                        Submit
+  </Button>
+                                </div>
+                            </Form>
+                        </div>
+
+                    </Card.Body>
+
+                </Card>
             </div>
-         );
+        );
     }
 }
- 
-export default OrderDetail;
+
+
+
+export default OrderDetails;

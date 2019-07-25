@@ -6,7 +6,8 @@ import Hero from "../../components/Hero/Hero"
 import HowWeWork from "../../components/HowWeWork/HowWeWork"
 import Services from "../../components/Services/Services"
 import Footer from "../../components/Footer/Footer"
-
+import MyOrders from "../../Pages/MyOrders/MyOrders.js"
+import ContactUs from "../Contact-Us/ContactUs.js"
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -22,6 +23,8 @@ class LandingPage extends React.Component {
                 <Hero />
                 <HowWeWork />
                 <Services />
+                {/* <MyOrders /> */}
+                {/* <ContactUs /> */}
                 <Footer />
             </div>
          );
