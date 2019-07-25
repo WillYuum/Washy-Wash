@@ -1,11 +1,40 @@
 
 import React from 'react';
+import {Jumbotron,Button} from 'react-bootstrap';
+import './Hero.css'
 
-export default function Hero() {
+const  Hero=() =>{
     return (
         <div>
-            
 
-        </div>
+
+ 
+  
+  <div className="bg-img">
+  <form action="/action_page.php" className="containerhero">
+    <h1>SingIn</h1>
+    <label htmlFor="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required />
+    <label htmlFor="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required />
+    <button type="submit" className="btn">Login</button>
+  </form>
+  
+
+  <p>
+      hello how are you
+  </p>
+  </div>
+  <p>
+  </p>
+
+
+</div>
+
+
+
+
+        
     );
 }
+export default Hero;

@@ -1,5 +1,8 @@
 .dropnav{
     margin: auto 15px;  
+    width: 130px;
+    height: 48px;
+    
 }
 a{
     color:green;
