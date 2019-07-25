@@ -12,14 +12,18 @@ class ContactUsForm extends React.Component {
   render() {
     return (
       <div className="ContactUsForm-Container">
-        <Form md="5">
+        <Form >
           <h2>Contact Us</h2>
+          <Form.Text>
+          Got a question? We'd Love to hear from you. Send us a message and
+          we'll respond as soon as possible
+        </Form.Text>
           <Form.Row>
-            <Col md="6">
+            <Col xs = "12" md="6">
               <Form.Label>Name*</Form.Label>
               <Form.Control type="text" required />
             </Col>
-            <Col md="6">
+            <Col xs = "12" md="6">
               <Form.Label>LastName*</Form.Label>
               <Form.Control type="text" required />
             </Col>
@@ -27,9 +31,7 @@ class ContactUsForm extends React.Component {
           <Form.Row>
             <Form.Label>Email*</Form.Label>
             <Form.Control type="email" required />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
+            
           </Form.Row>
 
           <Form.Row>
