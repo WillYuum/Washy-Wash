@@ -9,11 +9,13 @@ import Footer from "../../components/Footer/Footer"
 import MyOrders from "../../Pages/MyOrders/MyOrders.js"
 import ContactUs from "../Contact-Us/ContactUs.js"
 
+
+
 class LandingPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-
+            
          }
     }
     render() { 
@@ -22,7 +24,9 @@ class LandingPage extends React.Component {
                 <NavigationBar />
                 <Hero />
                 <HowWeWork />
-                <Services />
+
+
+                <Services  />
                 {/* <MyOrders /> */}
                 {/* <ContactUs /> */}
                 <Footer />
