@@ -13,7 +13,7 @@ class ContactUs extends React.Component {
     render() { 
         return ( 
             <div className = "ContactUsForm-container">
-                {/* <ContactUsForm /> */}
+                <ContactUsForm />
             </div>
          );
     }

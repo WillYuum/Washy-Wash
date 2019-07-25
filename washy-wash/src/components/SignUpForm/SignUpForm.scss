@@ -1,0 +1,33 @@
+.SignUpForm-container {
+  background-image: linear-gradient(to top, #00c6f8, #3886fc);
+  max-width: 30vw;
+  min-width: 300px;
+  margin: 80px auto;
+  padding: 20px;
+  * {
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+    color: White;
+  }
+
+  .form-label {
+    color: White;
+    margin: 0;
+  }
+
+  
+
+  .form-row {
+    padding: 10px 20px;
+  }
+
+  .text-muted {
+    color: white !important;
+  }
+
+  button {
+    width: 100%;
+  }
+}
