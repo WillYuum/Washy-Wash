@@ -5,23 +5,20 @@ import { Button, ListGroupItem, Form, ListGroup, Card } from 'react-bootstrap';
 // import Rater from 'react-rater';
 // import 'react-rater/lib/react-rater.css';
 
-
 class OrderDetails extends React.Component {
     state = {}
     render() {
         return (
             <div>
-                <Card style={{ width: '20rem' }} >
+                <Card className="OrderDetails-Card">
                     <Card.Body className="OrderDetails-CardBody">
                         <div className="OrderDetails-CardHeader">
                             <Card.Title>Order Details</Card.Title>
-                            <Card.Text> CREATE TIME: <br></br> 23/7/2019 </Card.Text>
+                            <Card.Text> CREATE TIME: <br></br> {this.props.Items.createdAt} </Card.Text>
                         </div>
-                        <Card.Text> ITEMS:
-
-    </Card.Text>
-                        <Card.Text> STATUS: Pending</Card.Text>
-                        <Card.Text> PRICE: 20$</Card.Text>
+                        <Card.Text> ITEMS: {this.props.Items.createdAt}</Card.Text>
+                        <Card.Text> STATUS: {this.props.Items.createdAt}</Card.Text>
+                        <Card.Text> Price: {this.props.Items.createdAt}$</Card.Text>
                         <hr></hr>
                         <div className="OrderDetails-Rater">
                             {/* <Rater total={5} rating={0} /> */}

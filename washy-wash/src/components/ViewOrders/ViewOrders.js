@@ -11,42 +11,56 @@ import "./ViewOrders.css"
 class  ViewOrders extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = { Items: this.props.Items
+        // orderNumber:this.props.location.state.Items.orderNo,
+        // NumberOfItems:this.props.location.state.Items.noItems,
+        // TimeCreated:this.props.location.state.Items.createdAt,
+        // ThePrice:this.props.location.state.Items.price,
         }
     }
+    // handdleChange= event => {
+    //      if (this.props.Items)
+    // };
+
+    
     render() { 
         return (  
             <div>
             <div>
         <ButtonToolbar className="ViewOrders-StatusNav">
     <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
-      <ToggleButton value={1}>Pending</ToggleButton>
-      <ToggleButton value={2}>Processing</ToggleButton>
-      <ToggleButton value={3}>Done</ToggleButton>
+      <ToggleButton name="Pending" >Pending</ToggleButton>
+      <ToggleButton name="Procesing" >Processing</ToggleButton>
+      <ToggleButton name="Done" >Done</ToggleButton>
     </ToggleButtonGroup>
   </ButtonToolbar>
             </div>
             
            <br></br> <br></br>
-
+           <div className="ViewOrders-Scrollbar">
+{this.state.Items.map(x=>
         <div>
      <Card className="ViewOrders-Card"> 
-
-  <Card.Body  >
-      <div className="ViewOrders-CardBody">
-    <Card.Text>Order #: <br></br>1 </Card.Text>
-    <Card.Text># of Orders : <br></br>10   </Card.Text>
-    <Card.Text>Created at : <br></br>6/7/2019   </Card.Text>
-    <Card.Text>Price: <br></br>20$    </Card.Text>
-</div>
-
-<div className="ViewOrders-CardButton">
-<Button variant="primary">View More</Button>
+       <Card.Body  >
+              <div className="ViewOrders-CardBody">
+              <Card.Text> Order#:  <br></br> { x.orderNo} </Card.Text>
+              <Card.Text># of Items : <br></br> {x.noItems}  </Card.Text>
+              <Card.Text>Created at : <br></br>  {x.createdAt} </Card.Text>
+              <Card.Text>Price: <br></br> {x.price}  </Card.Text>
+          </div>
+          <div className="ViewOrders-CardButton">
+<Button variant="primary" onClick={this.handdleChange} >View More</Button>
 </div>
 
 </Card.Body>
 </Card>
 </div>
+       )
+    }
+</div>
+
+
+
 </div>
 
         );

@@ -9,13 +9,18 @@
     flex-direction: column;
     flex-wrap: wrap;
 } */
-
+.OrderDetails-Card {
+    width: 20rem;
+    margin:25px;
+    margin-top: 110px;
+    position: fixed;
+}
 .OrderDetails-CardBody {
     background-color: rgb(135, 206, 235,0.7) !important;
 }
 .OrderDetails-CardBody:hover {
     
-    background-color:  rgb(18, 172, 199);;
+    background-color:  rgb(18, 172, 199);
 }
 .OrderDetails-CardHeader {
     display : flex;

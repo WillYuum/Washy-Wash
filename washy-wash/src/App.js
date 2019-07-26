@@ -4,7 +4,7 @@ import LandingPage from "./Pages/LandingPage/landingPage"
 import MyOrders from './Pages/MyOrders/MyOrders';
 
 import ContactUs from "./Pages/Contact-Us/ContactUs.js"
-
+import ViewOrders from "./components/ViewOrders/ViewOrders";
 import NavigationBar from "./components/NavigationBar/NavigationBar.js"
 import Footer from "./components/Footer/Footer.js"
 class App extends React.Component {
@@ -17,9 +17,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        
-        
-        <LandingPage /> 
+       {/*  <ViewOrders /> */}
+        < MyOrders />
+        {/* <LandingPage />  */}
         {/* CMS */}
      
       </div>
