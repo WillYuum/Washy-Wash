@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navbar, Nav , NavDropdown, Form , Button, FormControl  } from 'react-bootstrap';
 import './NavigationBar.css'
-
+import {Link} from "react-router-dom";
 
 
 
@@ -43,7 +43,7 @@ class NavigationBar extends React.Component {
         {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
       </NavDropdown></Button>
     </Form>
-      <Button variant="outline-success" size="lg">Contact Us</Button>
+     <Link to="/ContactUs"> <Button variant="outline-success" size="lg">Contact Us</Button></Link>
     
   </Navbar.Collapse>
 </Navbar>

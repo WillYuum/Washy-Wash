@@ -1,27 +1,28 @@
-import React from 'react';
-import LandingPage from "./Pages/LandingPage/landingPage"
+import React from "react";
+import LandingPage from "./Pages/LandingPage/landingPage";
 
-import MyOrders from './Pages/MyOrders/MyOrders';
 
-import ContactUs from "./Pages/Contact-Us/ContactUs.js"
-import ViewOrders from "./components/ViewOrders/ViewOrders";
-import NavigationBar from "./components/NavigationBar/NavigationBar.js"
-import Footer from "./components/Footer/Footer.js"
+import Main from "./Pages/MainPage/Main.js";
+
+
+import SignUp from "./Pages/SignUp/SignUp.js";
+
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Link,
+  Switch} from "react-router-dom";
+
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-  }
   render() {
     return (
       <div>
-       {/*  <ViewOrders /> */}
-        < MyOrders />
-        {/* <LandingPage />  */}
-        {/* CMS */}
-     
+        <Router>
+          <Switch>
+            <LandingPage />
+          </Switch>
+        </Router>
       </div>
     );
   }
@@ -29,3 +30,10 @@ class App extends React.Component {
 
 export default App;
 
+/* <Route exact path="/" render={() => (
+              this.state.loggedIn ? (
+                <Redirect to="/a" />
+              ) : (
+                  <h1>It didn't work</h1>
+                )
+            )} /> */
