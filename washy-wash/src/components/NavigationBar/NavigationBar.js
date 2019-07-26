@@ -1,7 +1,7 @@
 import React from 'react';
 import {Navbar, Nav , NavDropdown, Form , Button, FormControl  } from 'react-bootstrap';
 import './NavigationBar.css'
-
+import {Link} from "react-router-dom";
 
 
 
@@ -19,7 +19,7 @@ class NavigationBar extends React.Component {
 
 
  <Navbar bg="" expand="lg" fixed="top">
-  <Navbar.Brand href="#home"><img src="http://localhost:3000/1.jpg" width="60px" height="60px"></img></Navbar.Brand>
+  <Navbar.Brand href="#home"><img src="http://localhost:3000/1.png" width="100%" height="60px"></img></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto" >
@@ -43,7 +43,7 @@ class NavigationBar extends React.Component {
         {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
       </NavDropdown></Button>
     </Form>
-      <Button variant="outline-success" size="lg">Contact Us</Button>
+     <Link to="/ContactUs"> <Button variant="outline-success" size="lg">Contact Us</Button></Link>
     
   </Navbar.Collapse>
 </Navbar>

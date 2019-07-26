@@ -21,13 +21,9 @@ const  Hero=() =>{
   </form>
   
 
-  <p>
-      hello how are you
-  </p>
-  </div>
-  <p>
-  </p>
 
+  </div>
+ 
 
 </div>
 

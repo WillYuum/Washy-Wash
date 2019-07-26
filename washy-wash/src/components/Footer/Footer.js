@@ -5,17 +5,7 @@ import "./Footer.css"
  const Footer = () => {
      return ( 
          <div>
-{/* <StickyFooter
-    bottomThreshold={50}
-    normalStyles={{
-    backgroundColor: "#999999",
-    padding: "2rem"
-    }}
-    stickyStyles={{
-    backgroundColor: "rgba(255,255,255,.8)",
-    padding: "2rem"
-    }} */}
->	
+
 
 
 
@@ -23,8 +13,7 @@ import "./Footer.css"
 <footer class="footer-distributed">
 
 <div class="footer-left">
-
-    <h3>Company<span>logo</span></h3>
+<img src="http://localhost:3000/1.png" width="50% " height="60px"></img>
 
     <p class="footer-links">
         <a href="#">Home</a>

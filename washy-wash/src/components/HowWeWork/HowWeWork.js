@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button ,Jumbotron,Container ,Row,Image,Col} from 'react-bootstrap';
+import "./HowWeWork.css"
 
 
 const HowWeWork = () => {

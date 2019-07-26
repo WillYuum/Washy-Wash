@@ -1,5 +1,6 @@
 import React from 'react';
 import "./landingpage.css";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import NavigationBar from "../../components/NavigationBar/NavigationBar"
 import Hero from "../../components/Hero/Hero"
@@ -7,6 +8,8 @@ import HowWeWork from "../../components/HowWeWork/HowWeWork"
 import Services from "../../components/Services/Services"
 import Footer from "../../components/Footer/Footer"
 
+import Main from "../MainPage/Main.js"
+import ContactUs from '../Contact-Us/ContactUs';
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -18,10 +21,15 @@ class LandingPage extends React.Component {
     render() { 
         return ( 
             <div>
-                <NavigationBar />
-                <Hero />
-                <HowWeWork />
-                <Services />
+                 <NavigationBar />
+                <Router>
+                    <Switch>
+                        <Route exact path ="/">
+                            <Main/>
+                        </Route>
+        <Route path = "/ContactUs" render={()=><ContactUs/>}/>
+                    </Switch>
+               </Router>
                 <Footer />
             </div>
          );

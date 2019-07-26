@@ -11,6 +11,7 @@
    
     /* The image used */
     background-image: url("http://localhost:3000/h.jpg");
+    background-size: 100% 100%;
     width: 100vw;
     height: 100vh;
     /* Control the height of the image */
