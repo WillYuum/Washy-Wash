@@ -1,6 +1,6 @@
 import React from 'react';
 import LandingPage from "./Pages/LandingPage/landingPage"
-import ViewOrders from "./components/ViewOrders/ViewOrders"
+
 import MyOrders from './Pages/MyOrders/MyOrders';
 import { BrowserRouter as Router, Redirect, Route, Link, Switch } from "react-router-dom";
 import Main from "./Pages/MainPage/Main.js"
@@ -54,6 +54,7 @@ class App extends React.Component {
 
 
         {/* CMS */}
+     
       </div>
     );
   }

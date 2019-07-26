@@ -1,4 +1,4 @@
-.orderDetails {
+/* .orderDetails {
     width:330px;
     height:420px;
     background-color: grey;
@@ -8,4 +8,28 @@
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
+} */
+
+.OrderDetails-CardBody {
+    background-color: rgb(135, 206, 235,0.7) !important;
+}
+.OrderDetails-CardBody:hover {
+    
+    background-color:  rgb(18, 172, 199);;
+}
+.OrderDetails-CardHeader {
+    display : flex;
+    justify-content: space-between;
+
+}
+.OrderDetails-Rater {
+    display: flex;
+    justify-content: center;
+}
+
+.OrderDetails-FormSubmit {
+    float: right;
+}
+.react-rater-star {
+    font-size: 40px !important;
 }
