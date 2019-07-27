@@ -14,6 +14,8 @@ class MyOrders extends React.Component {
     super(props);
     this.state = {
       NoOfItem:"",
+      status:"",
+      Price:"",
       Items: [
         {
           orderNo: 1,
@@ -69,8 +71,8 @@ class MyOrders extends React.Component {
   }
 
 
-  updateOrder = (NoItem)=>{
-    this.setState({NoOfItem:NoItem});
+  updateOrder = (NoItem,status,Price)=>{
+    this.setState({NoOfItem:NoItem,status:status,Price:Price});
     console.log("HEAsaoifhaskf=====>",this.state.NoOfItem)
   }
   render() {
@@ -84,7 +86,7 @@ class MyOrders extends React.Component {
             </Col>
             {/*  <Col ><ViewOrdersNew /></Col> */}
             <Col>
-              <OrderDetail a={this.state.NoOfItem}  />
+              <OrderDetail _Items={this.state.NoOfItem} _Status={this.state.status} _Price={this.state.Price} />
             </Col>
           </Row>
         </Container>

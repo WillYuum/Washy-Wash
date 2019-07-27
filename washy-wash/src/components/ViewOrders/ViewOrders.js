@@ -62,7 +62,7 @@ class ViewOrders extends React.Component {
                     </Card.Text>
                   </div>
                   <div className="ViewOrders-CardButton">
-                    <Button onClick={()=>this.props.numberItem("5")} variant="primary">
+                    <Button onClick={()=>this.props.numberItem(x.noItems,x.status,x.price)} variant="primary">
                       View More
                     </Button>
                    

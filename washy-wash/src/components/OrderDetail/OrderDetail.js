@@ -18,9 +18,9 @@ class OrderDetails extends React.Component {
                 CREATE TIME: <br /> {this.props.a}
               </Card.Text> */}
             </div>
-            <Card.Text> ITEMS: {this.props.a}</Card.Text>
-            <Card.Text> STATUS: {this.props.a}</Card.Text>
-            <Card.Text> Price: ${this.props.a}</Card.Text>
+            <Card.Text> ITEMS: {this.props._Items}</Card.Text>
+            <Card.Text> STATUS: {this.props._Status}</Card.Text>
+            <Card.Text> Price: ${this.props._Price}</Card.Text>
             <hr />
             <div className="OrderDetails-Rater">
               {/* <Rater total={5} rating={0} /> */}
