@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar, Nav , NavDropdown, Form , Button, FormControl  } from 'react-bootstrap';
-import './NavigationBar.css'
+import './NavigationBar.scss'
 import {Link} from "react-router-dom";
 
 
