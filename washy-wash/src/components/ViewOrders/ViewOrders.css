@@ -1,6 +1,7 @@
 .ViewOrders-CardBody {
     display: flex;
     justify-content:  space-between;
+    
 }
 
 .ViewOrders-CardButton {
@@ -8,12 +9,19 @@
     justify-content: center;
     position: relative;
    top:12px;
-    
-    
-    
 }
+
+.ViewOrders-Scrollbar {
+    height: 32em;
+    overflow-y: auto;
+    white-space: nowrap;
+
+
+}
+
 .ViewOrders-Card {
     background-color: rgb(135, 206, 235,0.7);
+    margin:25px;
 }
 .ViewOrders-Card:hover {
     background-color: rgb(18, 172, 199);
