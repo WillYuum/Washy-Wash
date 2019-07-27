@@ -13,16 +13,23 @@ import {
   Route,
   Link,
   Switch} from "react-router-dom";
+import ContactUs from "./Pages/Contact-Us/ContactUs";
 
 class App extends React.Component {
   render() {
     return (
       <div>
         <Router>
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/contactus" exact component={ContactUs} />
+        </Router>
+    
+
+        {/* <Router>
           <Switch>
             <LandingPage />
           </Switch>
-        </Router>
+        </Router> */}
       </div>
     );
   }
