@@ -5,21 +5,17 @@ import {Link} from "react-router-dom";
 
 
 
-class NavigationBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
 
-        }
-    }
-    render() {
+const NavigationBar =()=>{
+  
+   
         // let logged_in = false;
         return (
             <div className="NavBar">
 
 
  <Navbar bg="" expand="lg" fixed="top">
-  <Navbar.Brand href="#home"><img src="http://localhost:3000/1.png" width="100%" height="60px"></img></Navbar.Brand>
+ <Link to="/"><Navbar.Brand href="#home"><img src="http://localhost:3000/1.png" width="100%" height="60px"></img></Navbar.Brand></Link> 
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto" >
@@ -36,7 +32,7 @@ class NavigationBar extends React.Component {
     
       {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
       <Button className="dropnav"  variant="outline-success" size="sm">  <NavDropdown title="profile" id="basic-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">My ordars</NavDropdown.Item>
+      <Link to="/MyOrders">  <NavDropdown.Item href="#action/3.1">My Orders</NavDropdown.Item></Link>
         <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
         <NavDropdown.Divider />
@@ -58,6 +54,5 @@ class NavigationBar extends React.Component {
             </div>
         );
     }
-}
 
 export default NavigationBar;

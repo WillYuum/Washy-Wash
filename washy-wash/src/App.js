@@ -1,36 +1,46 @@
 import React from "react";
 import LandingPage from "./Pages/LandingPage/landingPage";
+import Myorders from "./Pages/MyOrders/MyOrders"
 
 
 import Main from "./Pages/MainPage/Main.js";
-
-
-import SignUp from "./Pages/SignUp/SignUp.js";
 
 import {
   BrowserRouter as Router,
   Redirect,
   Route,
   Link,
-  Switch} from "react-router-dom";
+  Switch
+} from "react-router-dom";
+import SignUp from "./Pages/SignUp/SignUp";
+
+
 import ContactUs from "./Pages/Contact-Us/ContactUs";
 
 class App extends React.Component {
   render() {
     return (
+
+
+
       <div>
         <Router>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/contactus" exact component={ContactUs} />
-        </Router>
-    
+          <Switch>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/contactus" exact component={ContactUs} />
+            <Route path="/MyOrders" exact component={Myorders} />
+            <Route  path="/SignUp"  component={SignUp} />
 
-        {/* <Router>
+
+            {/* <Router>
           <Switch>
             <LandingPage />
           </Switch>
         </Router> */}
+          </Switch>
+        </Router>
       </div>
+
     );
   }
 }

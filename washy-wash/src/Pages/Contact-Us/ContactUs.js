@@ -1,5 +1,6 @@
 import React from   'react'
 import "./ContactUs.css"
+import NavigationBar from "../../components/NavigationBar/NavigationBar.js"
 import Footer from "../../components/Footer/Footer.js"
 import ContactUsForm from "../../components/ContactUsForm/ContactUsForm.js"
 
@@ -13,7 +14,9 @@ class ContactUs extends React.Component {
     render() { 
         return ( 
             <div className = "ContactUsForm-container">
+                <NavigationBar />
                 <ContactUsForm />
+                <Footer />
             </div>
          );
     }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Jumbotron, Button } from "react-bootstrap";
 import "./Hero.scss";
+import {Link} from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -21,9 +22,12 @@ const Hero = () => {
             name="psw"
             required
           />
-          <button type="submit" className="btn">
-            Login
-          </button>
+           <button type="submit" className="btn">
+            Login</button>
+          
+            <Link to="/SignUp"> <p>
+            SignUp
+          </p></Link>
         </form>
       </div>
     </div>
