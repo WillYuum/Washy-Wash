@@ -3,6 +3,6 @@
 .ContactUsForm-container{
     width:100vw;
     height:100vh;
-    background-image: linear-gradient(to top, #0066ff, #00ccff);
+    background-image: linear-gradient(to top, rgb(41, 203, 224), rgb(99, 216, 35));
     padding:1px;
 }

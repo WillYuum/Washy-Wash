@@ -1,0 +1,27 @@
+
+.jumbotron{
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#92e068+0,13c0d7+100 */
+   background-image: linear-gradient(to top, rgb(41, 203, 224), rgb(99, 216, 35));
+}
+
+.Services-container{
+    text-align: center;
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    .col-md-4{
+        padding:60px;
+        margin:0;
+    }
+
+    h2{
+        font-size: 18px;
+        margin-top:15px;
+    }
+
+    
+}
+

@@ -27,8 +27,6 @@ class LandingPage extends React.Component {
 
 
                 <Services  />
-                {/* <MyOrders /> */}
-                {/* <ContactUs /> */}
                 <Footer />
             </div>
          );
