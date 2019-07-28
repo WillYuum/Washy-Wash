@@ -1,7 +1,10 @@
 
 .ContactUsForm-container{
     width:100vw;
-    height:100vh;
-    background-image: linear-gradient(to top, rgb(41, 203, 224), rgb(99, 216, 35));
+    background-image: linear-gradient(
+        to top,
+        rgb(26, 146, 161),
+        rgb(73, 201, 218)
+      );
     padding:1px;
-}
+} 

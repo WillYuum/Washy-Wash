@@ -40,8 +40,12 @@ const Footer = () => {
         <div class="footer-right">
           <p class="footer-company-about">
             <span>About the company</span>
-            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-            euismod convallis velit, eu auctor lacus vehicula sit amet.
+            WashyWash is a company that is set out to change how people clean
+            their clothes globally, switching people from the outdated PERC Dry
+            Clean system to our EcoClean technology. It started as a simple
+            concept: give people the best possible cleaning quality, with zero
+            health risks coupled with the best customer service and technology
+            out there.
           </p>
 
           <div class="footer-icons">

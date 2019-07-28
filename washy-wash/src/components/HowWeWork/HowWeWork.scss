@@ -1,6 +1,34 @@
 .HowWeWork-container{
-    height: 650px;
+
+    .Main-Title{
+        margin-bottom:50px;
+    }
+
+    .title{
+        font-weight: 400;
+        letter-spacing: 4px;
+    }
+
+    .description{
+        word-wrap: break-word;
+        margin-top:60px;
+    }
+
+    .title,
+    .description{
+        margin-top:20px;
+    }
+
+    .row{
+        margin:0 auto;
+    }
+    .col-md-4{
+        width:100%;
+    }
+
+  
+   
     .rounded-circle{
-        width: 100%;
+        height: 170px;
     }
 }

@@ -1,27 +1,45 @@
-
-.jumbotron{
-   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#92e068+0,13c0d7+100 */
-   background-image: linear-gradient(to top, rgb(41, 203, 224), rgb(99, 216, 35));
+.jumbotron {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#92e068+0,13c0d7+100 */
+  background-image: linear-gradient(
+    to top,
+    rgb(26, 146, 161),
+    rgb(73, 201, 218)
+  );
 }
 
-.Services-container{
-    text-align: center;
-    width:100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.Services-container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
+  .col-md-4 {
+    padding: 60px;
+    margin: 0;
+  }
 
-    .col-md-4{
-        padding:60px;
-        margin:0;
-    }
+  .rounded-circle {
+    border: 5px solid #006a16;
+    min-width:200px;
+    min-height: 200px;
+    max-width:200px;
+    max-height: 200px;
+  }
 
-    h2{
-        font-size: 18px;
-        margin-top:15px;
-    }
+  .Cloth-details {
+    margin-top: 20px;
+  }
 
-    
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+  }
 }
-

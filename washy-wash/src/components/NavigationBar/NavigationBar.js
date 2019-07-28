@@ -31,7 +31,7 @@ const NavigationBar =()=>{
     <Form inline>
     
       {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
-      <Button className="dropnav"  variant="outline-success" size="sm">  <NavDropdown title="profile" id="basic-nav-dropdown">
+      <Button className="dropnav"  variant="outline-success" size="sm">  <NavDropdown title="Profile" id="basic-nav-dropdown">
       <Link to="/MyOrders">  <NavDropdown.Item href="#action/3.1">My Orders</NavDropdown.Item></Link>
         <NavDropdown.Item href="#action/3.2">Settings</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
