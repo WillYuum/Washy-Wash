@@ -7,12 +7,28 @@
   );
 }
 
+.service-slide {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+.service-item {
+  width: 100vw;
+  height: 320px;
+  margin: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
 .Services-container {
   text-align: center;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  
 
   .col-md-4 {
     padding: 60px;
@@ -21,10 +37,11 @@
 
   .rounded-circle {
     border: 5px solid #006a16;
-    min-width:200px;
+    min-width: 200px;
     min-height: 200px;
-    max-width:200px;
+    max-width: 200px;
     max-height: 200px;
+    margin:0 auto;
   }
 
   .Cloth-details {

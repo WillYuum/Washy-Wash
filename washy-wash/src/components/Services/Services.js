@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Services.scss";
 import { Button, Jumbotron, Container, Row, Image, Col } from "react-bootstrap";
 import Carousel from "re-carousel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Services = () => {
@@ -47,8 +49,42 @@ const Services = () => {
     { Title: "Bra", Price: "151", img_link: "" }
   ]);
 
- 
-
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    accessibility: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
   return (
     <div>
@@ -58,29 +94,27 @@ const Services = () => {
         </center>
 
         <Container className="Services-container">
-         
-            <Row>
-              {Data.slice(0, 6).map(data => (
-                <Col text-center xs={12} md={4} lg={4}>
-                  <Image src={data.img_link} fluid roundedCircle />
-                  <center className="Cloth-details">
-                    <p>{data.Title}</p>
-                    <hr />
-                  </center>
-                  <center className="Cloth-details">
-                    <p>${data.Price}</p>
-                  </center>
+          <Row>
+            <Slider className ="service-slide"{...settings}>
+            {Data.map(data => (
+                <Col className="service-item" >
+              
+                  <div >
+                    <Image src={data.img_link} fluid roundedCircle />
+                    <center className="Cloth-details">
+                      <p>{data.Title}</p>
+                      <hr />
+                    </center>
+                    <center className="Cloth-details">
+                      <p>${data.Price}</p>
+                    </center>
+                  </div>
+                  
                 </Col>
               ))}
-            </Row>
-         
+            </Slider>
+          </Row>
         </Container>
-
-        <p>
-          <center>
-            <Button variant="primary">Learn more</Button>{" "}
-          </center>
-        </p>
       </Jumbotron>
 
       

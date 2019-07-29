@@ -44,10 +44,3 @@ class App extends React.Component {
 
 export default withRouter(App);
 
-/* <Route exact path="/" render={() => (
-              this.state.loggedIn ? (
-                <Redirect to="/a" />
-              ) : (
-                  <h1>It didn't work</h1>
-                )
-            )} /> */
