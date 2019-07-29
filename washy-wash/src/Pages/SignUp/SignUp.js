@@ -23,9 +23,9 @@ class SignUp extends React.Component {
                 </Col>
             </Row>
         </Container> */}
-        <NaviationBar />
+
         <SignUpForm />
-        <Footer/>
+  
       </div>
     );
   }
