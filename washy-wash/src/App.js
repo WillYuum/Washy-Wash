@@ -32,7 +32,7 @@ class App extends React.Component {
                   
 
           <Switch>
-          <Route path="/"  exact component={LandingPage} />
+          <Route path="/"   component={LandingPage} />
           <Route path="/cms"    render={()=>(<CreateOrderMain/>)} />
            }
            
