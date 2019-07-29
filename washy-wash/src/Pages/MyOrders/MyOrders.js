@@ -13,9 +13,9 @@ class MyOrders extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      NoOfItem:"",
-      status:"",
-      Price:"",
+      NoOfItem: "",
+      status: "",
+      Price: "",
       Items: [
         {
           orderNo: 1,
@@ -70,32 +70,41 @@ class MyOrders extends React.Component {
     };
   }
 
+  updateOrder = (NoItem, status, Price, createTime) => {
+    this.setState({
+      NoOfItem: NoItem,
+      status: status,
+      Price: Price,
+      createdAt: createTime
+    });
+  };
 
-  updateOrder = (NoItem,status,Price)=>{
-    this.setState({NoOfItem:NoItem,status:status,Price:Price});
-    console.log("HEAsaoifhaskf=====>",this.state.NoOfItem)
-  }
+  
   render() {
     return (
       <div className="MyOrder-Container">
-        <NavigationBar />
         <Container>
           <Row>
-            <Col>
-              <ViewOrders numberItem={this.updateOrder} Item={this.state.Items} />
+            <Col md="8">
+              <ViewOrders
+                numberItem={this.updateOrder}
+                Item={this.state.Items}
+              />
             </Col>
             {/*  <Col ><ViewOrdersNew /></Col> */}
-            <Col>
-              <OrderDetail _Items={this.state.NoOfItem} _Status={this.state.status} _Price={this.state.Price} />
+            <Col md="4">
+              <OrderDetail
+                _Items={this.state.NoOfItem}
+                _Status={this.state.status}
+                _Price={this.state.Price}
+                _CreateAt={this.state.createdAt}
+              />
             </Col>
           </Row>
         </Container>
-        <Footer />
       </div>
     );
   }
 }
 
 export default MyOrders;
-
-

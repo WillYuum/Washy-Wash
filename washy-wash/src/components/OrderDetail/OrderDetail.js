@@ -1,29 +1,29 @@
 import React from "react";
-import "./OrderDetail.css";
+import "./OrderDetail.scss";
 import { Button, ListGroupItem, Form, ListGroup, Card } from "react-bootstrap";
 // import StarRatingComponent from 'react-star-rating-component';
-// import Rater from 'react-rater';
-// import 'react-rater/lib/react-rater.css';
+import Rater from "react-rater";
+import "react-rater/lib/react-rater.css";
 
 class OrderDetails extends React.Component {
   state = {};
   render() {
     return (
-      <div>
+      <div className="OrderDetails-container">
         <Card className="OrderDetails-Card">
           <Card.Body className="OrderDetails-CardBody">
             <div className="OrderDetails-CardHeader">
               <Card.Title>Order Details</Card.Title>
-              {/* <Card.Text>
-                CREATE TIME: <br /> {this.props.a}
-              </Card.Text> */}
+              <Card.Text>
+                {this.props._CreateAt}
+              </Card.Text>
             </div>
             <Card.Text> ITEMS: {this.props._Items}</Card.Text>
             <Card.Text> STATUS: {this.props._Status}</Card.Text>
             <Card.Text> Price: ${this.props._Price}</Card.Text>
             <hr />
-            <div className="OrderDetails-Rater">
-              {/* <Rater total={5} rating={0} /> */}
+            <div>
+              <Rater className="OrderDetails-Rater" total={5} rating={0} />
             </div>
             <div>
               <Form>
