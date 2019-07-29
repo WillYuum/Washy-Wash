@@ -6,11 +6,12 @@ import Myorders from "./Pages/MyOrders/MyOrders"
 import Main from "./Pages/MainPage/Main.js";
 
 import {
-  BrowserRouter as Router,
+  
   Redirect,
   Route,
   Link,
-  Switch
+  Switch, 
+  withRouter
 } from "react-router-dom";
 import SignUp from "./Pages/SignUp/SignUp";
 
@@ -24,13 +25,10 @@ class App extends React.Component {
 
 
       <div>
-        <Router>
+       
           <Switch>
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/contactus" exact component={ContactUs} />
-            <Route path="/MyOrders" exact component={Myorders} />
-            <Route  path="/SignUp"  component={SignUp} />
-
+            <Route path="/"  component={LandingPage} />
+            
 
             {/* <Router>
           <Switch>
@@ -38,14 +36,13 @@ class App extends React.Component {
           </Switch>
         </Router> */}
           </Switch>
-        </Router>
       </div>
 
     );
   }
 }
 
-export default App;
+export default withRouter(App);
 
 /* <Route exact path="/" render={() => (
               this.state.loggedIn ? (

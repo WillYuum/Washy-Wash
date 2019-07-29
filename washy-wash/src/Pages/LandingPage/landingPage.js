@@ -9,6 +9,7 @@ import Services from "../../components/Services/Services"
 import Footer from "../../components/Footer/Footer"
 import MyOrders from "../../Pages/MyOrders/MyOrders.js"
 import ContactUs from "../Contact-Us/ContactUs.js"
+import SignUp from "../../Pages/SignUp/SignUp.js"
 
 
 import Main from "../MainPage/Main.js"
@@ -24,14 +25,16 @@ class LandingPage extends React.Component {
         return ( 
             <div>
                  <NavigationBar />
-                <Router>
+                
                     <Switch>
                         <Route exact path ="/">
                             <Main/>
                         </Route>
-        <Route path = "/ContactUs" render={()=><ContactUs/>}/>
+                        <Route path="/contactus"  render={(props)=><ContactUs {...props}/>} />
+            <Route path="/MyOrders" exact component={MyOrders} />
+            <Route  path="/SignUp"  component={SignUp} />
+
                     </Switch>
-               </Router>
                 <Footer />
             </div>
          );
