@@ -6,7 +6,7 @@
   
   .bg-img {
     width: 100vw;
-    min-height: 450px;
+    min-height: 650px;
 
    
     /* The image used */
@@ -17,14 +17,18 @@
     /* Control the height of the image */
     /* min-height: 650px;
     min-width: 100%; */
-
+h1{
+  text-align: center;
+}
   
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  }
+button{
+  color: #93E169
+}
   
   /* Add styles to the form container */
   .containerhero {
@@ -35,6 +39,10 @@
     max-width: 300px;
     padding: 16px;
     background-color: rgba(0,0,0,0.4);
+    color:#93E169;
+  }
+  a{
+    color: #93E169;
   }
   
   /* Full-width input fields */
@@ -50,7 +58,7 @@
     background-color: #ddd;
     outline: none;
   }
-  
+}
   /* Set a style for the submit button */
   /* .btn {
     background-color: #4CAF50;

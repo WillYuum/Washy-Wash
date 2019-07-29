@@ -8,7 +8,7 @@ const Hero = () => {
     <div>
       <div className="bg-img">
         <form action="/action_page.php" className="containerhero">
-          <h1>SignIn</h1>
+          <h1>Sign-In</h1>
           <label htmlFor="email">
             <b>Email</b>
           </label>
@@ -22,12 +22,12 @@ const Hero = () => {
             name="psw"
             required
           />
-           <button type="submit" className="btn">
-            Login</button>
-          
-            <Link to="/SignUp"> <p>
-            SignUp
-          </p></Link>
+         <center> <button type="submit" className="btn">
+            Sign In</button></center> 
+          <center>
+            <p>
+            Dont't have an acount?  <Link to="/SignUp">Sign Up</Link>
+          </p></center>
         </form>
       </div>
     </div>
