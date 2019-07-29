@@ -26,15 +26,15 @@ class LandingPage extends React.Component {
             <div>
                  <NavigationBar />
                 
-                    <Switch>
-                        <Route exact path ="/">
+                  {  <Switch>
+                       <Route exact path ="/">
                             <Main/>
                         </Route>
                         <Route path="/contactus"  render={(props)=><ContactUs {...props}/>} />
             <Route path="/MyOrders" exact component={MyOrders} />
             <Route  path="/SignUp"  component={SignUp} />
 
-                    </Switch>
+                    </Switch>}
                 <Footer />
             </div>
          );

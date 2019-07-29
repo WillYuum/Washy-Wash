@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import LandingPage from "./Pages/LandingPage/landingPage";
-import Myorders from "./Pages/MyOrders/MyOrders"
+import Myorders from "./Pages/MyOrders/MyOrders";
 
 
 import Main from "./Pages/MainPage/Main.js";
@@ -17,24 +17,25 @@ import SignUp from "./Pages/SignUp/SignUp";
 
 
 import ContactUs from "./Pages/Contact-Us/ContactUs";
+import CreateOrderMain from './CMS/components/createOrder /CreateOrderMain';
 
 class App extends React.Component {
+  state={
+    
+  }
   render() {
     return (
 
 
 
       <div>
-       
-          <Switch>
-            <Route path="/"  component={LandingPage} />
-            
+                  
 
-            {/* <Router>
           <Switch>
-            <LandingPage />
-          </Switch>
-        </Router> */}
+          <Route path="/"  exact component={LandingPage} />
+          <Route path="/cms"    render={()=>(<CreateOrderMain/>)} />
+           }
+           
           </Switch>
       </div>
 
