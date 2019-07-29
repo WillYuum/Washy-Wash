@@ -1,47 +1,23 @@
-import React from 'react';
+import React from "react";
 import LandingPage from "./Pages/LandingPage/landingPage";
 import Myorders from "./Pages/MyOrders/MyOrders";
 
-
 import Main from "./Pages/MainPage/Main.js";
-
-import {
-  
-  Redirect,
-  Route,
-  Link,
-  Switch, 
-  withRouter
-} from "react-router-dom";
-import SignUp from "./Pages/SignUp/SignUp";
-
-
-import ContactUs from "./Pages/Contact-Us/ContactUs";
-import CreateOrderMain from './CMS/components/createOrder /CreateOrderMain';
+import CMS from "./CMS/pages/CmsPage/Cms.js";
+import { Redirect, Route, Link, Switch, withRouter } from "react-router-dom";
 
 class App extends React.Component {
-  state={
-    
-  }
+  state = {};
   render() {
     return (
-
-
-
       <div>
-                  
-
-          <Switch>
-          <Route path="/"   component={LandingPage} />
-          <Route path="/cms"    render={()=>(<CreateOrderMain/>)} />
-           }
-           
-          </Switch>
+        <Switch>
+          <Route path="/" component={LandingPage} />
+          <Route path="/cms" render={() => <CMS />} />
+        </Switch>
       </div>
-
     );
   }
 }
 
 export default withRouter(App);
-

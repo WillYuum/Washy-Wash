@@ -5,9 +5,7 @@ import OrderDetail from "../../components/OrderDetail/OrderDetail";
 import "./MyOrders.css";
 import { Container, Row, Col } from "react-bootstrap";
 
-import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
-import Footer from "../../components/Footer/Footer.js";
-import { setConstantValue } from "typescript";
+
 
 class MyOrders extends React.Component {
   constructor(props) {
@@ -78,6 +76,8 @@ class MyOrders extends React.Component {
       createdAt: createTime
     });
   };
+
+
 
   
   render() {

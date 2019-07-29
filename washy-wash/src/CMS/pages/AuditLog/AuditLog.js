@@ -1,7 +1,7 @@
 import React from 'react';
 import "./AuditLog.scss";
 
-class AuditLog extends Component {
+class AuditLog extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

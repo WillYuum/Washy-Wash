@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Cms.scss"
 
-class Cms extends Component {
+class Cms extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 

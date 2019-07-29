@@ -1,7 +1,7 @@
 import React from 'react';
 import "./EmployeesMain.scss";
 
-class EmployeesMain extends Component {
+class EmployeesMain extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
