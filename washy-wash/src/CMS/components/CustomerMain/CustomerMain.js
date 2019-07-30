@@ -3,7 +3,7 @@ import "./CustomerMain.scss";
 import React from "react";
 import MaterialTable from "material-table";
 
-export default function MaterialTableDemo() {
+export default function CustomerMain() {
   const [state, setState] = React.useState({
     columns: [
       { title: "Name", field: "name" },
@@ -39,7 +39,7 @@ export default function MaterialTableDemo() {
   return (
     <div className="CustomerMain-Container">
       <MaterialTable
-        title="Editable Example"
+        title="Customers"
         columns={state.columns}
         data={state.data}
         editable={{

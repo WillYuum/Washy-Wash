@@ -5,6 +5,8 @@ import SideNav from "../../components/SideNav/SideNav.js";
 
 
 import Customer from "../../components/CustomerMain/CustomerMain.js";
+import Employees from "../../components/EmployeesMain/EmployeesMain.js"
+
 class Cms extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +24,7 @@ class Cms extends React.Component {
           <div className ="MainPage-container">
             <div className="box">CreateOrder</div>
             <div className="box"><Customer/></div>
-            <div className="box">Employees</div>
+            <div className="box"><Employees/></div>
             <div className="box">Cloth</div>
           </div>
         </div>
