@@ -21,6 +21,7 @@
     "react-slick": "^0.24.0",
     "react-star-ratings": "^2.3.0",
     "react-sticky-footer": "0.1.0-rc3",
+    "reactjs-popup": "^1.4.1",
     "slick-carousel": "^1.8.1",
     "typescript": "^3.5.3"
   },

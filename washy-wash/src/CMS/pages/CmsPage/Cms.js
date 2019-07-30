@@ -2,7 +2,7 @@ import React from "react";
 import "./Cms.scss";
 
 import SideNav from "../../components/SideNav/SideNav.js";
-
+import CreateMainOrder from "../../components/CreateMainOrder.js/CreateMainOrder.js";
 
 import Customer from "../../components/CustomerMain/CustomerMain.js";
 import Employees from "../../components/EmployeesMain/EmployeesMain.js"
@@ -16,13 +16,13 @@ class Cms extends React.Component {
     return (
       <div className="CMS-Container">
         <div className="SideNav">
-          <p>side</p>
+         
           <SideNav />
-        </div>
+        </div >
         {/* HERE IS THE MAIN PAGE FOR CMS */}
         <div className="MainPage">
           <div className ="MainPage-container">
-            <div className="box">CreateOrder</div>
+            <div className="box"> <br></br> <CreateMainOrder /></div>
             <div className="box"><Customer/></div>
             <div className="box"><Employees/></div>
             <div className="box">Cloth</div>

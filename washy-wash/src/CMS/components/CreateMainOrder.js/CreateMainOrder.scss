@@ -1,0 +1,33 @@
+.CreateMainOrder-Header {
+  text-align: center;
+  h6 {
+    font-size: 1.25rem;
+  }
+  
+}
+.CreateMainOrder {
+  display: flex;
+  column-count: 3;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 25px;
+
+  .box {
+    color: red;
+    height: 150px;
+    width: 150px;
+    background-color: rgb(8, 122, 122);
+    margin-top: 15px;
+    
+    .CreateMainOrder-text {
+      font-size: 20px;
+      display: block;
+      margin: 41% auto;
+      text-align: center;
+     
+      }
+  }
+
+  
+}
+

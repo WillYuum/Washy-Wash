@@ -6,10 +6,12 @@ $MainPage: #272727;
 
 
   .SideNav {
-    background-color: red;
+    background-color: rgb(3, 216, 216);
     width: 20%;
-
-  }
+    display:flex;
+    justify-content: space-around;
+    
+  };
 
   
 
@@ -22,7 +24,7 @@ $MainPage: #272727;
   }
 
   .box{
-      background-color: green;
+      background-color: rgb(18, 194, 141);
       width:550px;
       margin-top:20px
   }
