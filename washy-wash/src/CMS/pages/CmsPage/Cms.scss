@@ -1,0 +1,36 @@
+$MainPage: #272727;
+
+.CMS-Container {
+  width: 100vw;
+  display: flex;
+
+
+  .SideNav {
+    background-color: red;
+    width: 15%;
+
+  }
+
+  .MainPage {
+    color: red;
+    background-color: $MainPage;
+    width: 85%;
+  }
+
+  .MainPage-container{
+    width: 95%;
+    margin:10px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .box{
+      background-color: green;
+      min-width:400px;
+      min-height: 350px;
+      max-width:400px;
+      max-height: 350px;
+      margin-top:20px
+  }
+}

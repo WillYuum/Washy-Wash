@@ -7,13 +7,27 @@ import CMS from "./CMS/pages/CmsPage/Cms.js";
 import { Redirect, Route, Link, Switch, withRouter } from "react-router-dom";
 
 class App extends React.Component {
-  state = {};
+  state = {
+    loggedIn: true
+  };
   render() {
     return (
       <div>
-        <Switch>
+        {/* <Switch>
           <Route path="/" component={LandingPage} />
           <Route path="/cms" render={() => <CMS />} />
+        </Switch> */}
+        <Switch>
+          <Route
+            path="/"
+            render={() => {
+              if (this.state.loggedIn) {
+                console.log("You are in cms")
+                return <CMS />;
+              }
+              return <LandingPage />;
+            }}
+          />
         </Switch>
       </div>
     );
