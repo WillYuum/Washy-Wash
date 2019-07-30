@@ -3,6 +3,8 @@ import "./Cms.scss";
 
 import SideNav from "../../components/SideNav/SideNav.js";
 
+
+import Customer from "../../components/CustomerMain/CustomerMain.js";
 class Cms extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +21,7 @@ class Cms extends React.Component {
         <div className="MainPage">
           <div className ="MainPage-container">
             <div className="box">CreateOrder</div>
-            <div className="box">Customers</div>
+            <div className="box"><Customer/></div>
             <div className="box">Employees</div>
             <div className="box">Cloth</div>
           </div>
