@@ -12,12 +12,12 @@ class SideNav extends React.Component {
       <div   >
           <div className="SideNav-flex-container">
         <Nav defaultActiveKey="/home" className="SideNav-flex-column">
-         <Nav.Link  to="/" >Home</Nav.Link> 
+       <Nav.Link  to="/" >Home</Nav.Link> 
           <Nav.Link eventKey="link-1">Setting</Nav.Link>
           <Nav.Link eventKey="link-2">Logout</Nav.Link>
           <ButtonToolbar >
-            <Button className="SideNav-Edit" variant="primary">Edit Order</Button>
-            <Button className="SideNav-AuditLogger" variant="primary">Audit Logger</Button>
+           <Link to={'/CmsOrderDetails'}><Button className="SideNav-Edit" variant="primary">Edit Order  </Button></Link>
+          <Button className="SideNav-AuditLogger" variant="primary">Audit Logger</Button>
           </ButtonToolbar>
         </Nav>
       </div>
