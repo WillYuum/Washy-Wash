@@ -16,8 +16,8 @@ class SideNav extends React.Component {
           <Nav.Link eventKey="link-1">Setting</Nav.Link>
           <Nav.Link eventKey="link-2">Logout</Nav.Link>
           <ButtonToolbar >
-           <Link to ="/CmsOrederDetails"><Button className="SideNav-Edit" variant="primary">Edit Order</Button></Link> 
-            <Button className="SideNav-AuditLogger" variant="primary">Audit Logger</Button>
+           <Button className="SideNav-Edit" variant="primary"><Link to ="/CmsOrederDetails">Edit Order</Link>   </Button>
+          <Button className="SideNav-AuditLogger" variant="primary">Audit Logger</Button>
           </ButtonToolbar>
         </Nav>
       </div>
