@@ -1,0 +1,56 @@
+/* .orderDetails {
+    width:330px;
+    height:420px;
+    background-color: grey;
+}
+
+.orderDetails-list {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+
+
+.OrderDetails-container{
+    .OrderDetails-Card {
+        width: 100%;
+        margin:25px;
+        margin-top: 110px;
+    }
+    .OrderDetails-CardBody {
+        background-image: rgb(135, 206, 235) !important;
+    }
+    .OrderDetails-CardBody {
+        
+        background-color:  rgb(135, 206, 235);
+    }
+    .OrderDetails-CardHeader {
+        display : flex;
+        justify-content: space-between;
+    
+    }
+
+   
+    // .react-rater-star{
+    //     color:white !important;
+    // }
+    // .react-rater-star:hover{
+    //     color:white !important;
+    // }
+    // }
+    // .react-rater-star:hover{
+    //     color:green;
+    // }
+    
+    .OrderDetails-Rater {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .OrderDetails-FormSubmit {
+        float: right;
+    }
+    .react-rater-star {
+        font-size: 40px !important;
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./OrderDetail.scss";
+ import "./CmsOrderBox.scss";
 import { Button, ListGroupItem, Form, ListGroup, Card } from "react-bootstrap";
 // import StarRatingComponent from 'react-star-rating-component';
 import Rater from "react-rater";
