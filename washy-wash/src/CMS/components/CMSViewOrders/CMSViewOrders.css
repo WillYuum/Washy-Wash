@@ -6,7 +6,7 @@
 
 .ViewOrders-CardButton {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
    top:12px;
 }

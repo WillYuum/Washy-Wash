@@ -19,12 +19,19 @@ class Cms extends React.Component {
   render() {
     return (
       <div>
+        
         <div className="CMS-Container">
           <div className="SideNav">
             <SideNav />
+            
+
           </div>
-          <Switch>
+         
             {/* HERE IS THE MAIN PAGE FOR CMS */}
+            
+            <Switch>
+            <Route  exact path="/" render={ ()=>
+          
             <div className="MainPage">
               <div className="MainPage-container">
                 <div className="box">
@@ -41,13 +48,18 @@ class Cms extends React.Component {
                   <Cloth />
                 </div>
               </div>
+
+             
+              
             </div>
+             } />
             <Route
-              path="/CmsOrederDetails"
+              path="/CmsOrderDetails"
               render={() => <CmsOrderDetails />}
             />
-          </Switch>
+            </Switch>
         </div>
+      
       </div>
     );
   }

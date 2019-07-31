@@ -3,11 +3,14 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
+import FormCheck from 'react-bootstrap/FormCheck'
+
 import {
   Button,
   Table,
   ButtonToolbar,
   ToggleButtonGroup,
+  Group,
   ToggleButton
 } from "react-bootstrap";
 
@@ -63,8 +66,12 @@ class CMSViewOrders extends React.Component {
                   <Card className="ViewOrders-Card">
                     <Card.Body>
                       <div className="ViewOrders-CardBody">
+                      
                         <Card.Text>
                           Order #: <br /> {order.orderNo}
+                        </Card.Text>
+                        <Card.Text>
+                          Customer Name <br /> 
                         </Card.Text>
                         <Card.Text>
                           # of Items : <br /> {order.noItems}
@@ -77,7 +84,11 @@ class CMSViewOrders extends React.Component {
                         </Card.Text>
                       </div>
                       <div className="ViewOrders-CardButton">
-                        <Button
+                      <Form.Group controlId="formBasicChecbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+
+                      <Button
                           onClick={() =>
                             this.props.numberItem(
                               order.noItems,
@@ -89,6 +100,13 @@ class CMSViewOrders extends React.Component {
                           variant="primary"
                         >
                           View More
+                        </Button>
+                        <Button className="DELbutton"
+                        
+                     
+                          variant="primary"
+                        >
+                          Delete
                         </Button>
                       </div>
                     </Card.Body>
