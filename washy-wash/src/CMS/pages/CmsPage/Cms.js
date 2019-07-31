@@ -10,7 +10,7 @@ import Cloth from "../../components/ClothTypeMain/ClothTypeMain.js"
 import Customer from "../../components/CustomerMain/CustomerMain.js";
 import Employees from "../../components/EmployeesMain/EmployeesMain.js"
 
-import CMSORderDetails from "..//CmsOrderDetails/CmsOrderDetails.js"
+import CmsOrderDetails from "..//CmsOrderDetails/CmsOrderDetails.js"
 
 class Cms extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class Cms extends React.Component {
         </div>
       </div>
       {/* }}/> */}
-      <Route path="/CmsOrederDetails" component={CMSORderDetails} />
+      <Route path="/CmsOrederDetails" component={CmsOrderDetails} />
     </Switch >
     );
     
