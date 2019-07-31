@@ -1,6 +1,8 @@
 import React from "react";
 import "./Cms.scss";
 
+import { Redirect, Route, Link, Switch, withRouter } from "react-router-dom";
+
 
 import SideNav from "../../components/SideNav/SideNav.js";
 import CreateMainOrder from "../../components/CreateMainOrder.js/CreateMainOrder.js"
@@ -17,6 +19,8 @@ class Cms extends React.Component {
   }
   render() {
     return (
+      <Switch>
+      {/* <Route path="/" render={()=>{ */}
       <div className="CMS-Container">
         <div className="SideNav">
          
@@ -32,8 +36,13 @@ class Cms extends React.Component {
           </div>
         </div>
       </div>
+      
+      <Route path="/CmsOrederDetails" component={CMSORderDetails} />
+    </Switch >
     );
+    
   }
+  
 }
 
 export default Cms;
