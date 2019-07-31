@@ -7,6 +7,8 @@ import Cloth from "../../components/ClothTypeMain/ClothTypeMain.js"
 import Customer from "../../components/CustomerMain/CustomerMain.js";
 import Employees from "../../components/EmployeesMain/EmployeesMain.js"
 
+import CMSORderDetails from "..//CmsOrderDetails/CmsOrderDetails.js"
+
 class Cms extends React.Component {
   constructor(props) {
     super(props);
