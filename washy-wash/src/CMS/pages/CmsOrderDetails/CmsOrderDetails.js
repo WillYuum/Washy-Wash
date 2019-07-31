@@ -1,5 +1,6 @@
 import React from 'react';
 import "./CmsOrderDetails.scss"
+import CmsOrderBox from "../../components/CmsOrderBox/CmsOrderBox.js"
 
 class CmsOrderDetails extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class CmsOrderDetails extends React.Component {
     render() { 
         return ( 
             <div>
-                
+                <CmsOrderBox/>
             </div>
          );
     }
