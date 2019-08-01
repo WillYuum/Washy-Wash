@@ -61,25 +61,41 @@ import CounterInput from "react-bootstrap-counter";
                         </div>
                     </Modal.Body>
 
-                    <Modal.Footer className="ModalFooter">
-                        
-                        <Form >
-                        
-                         <Form.Group className="ModalSubmitForm" controlId="exampleForm.ControlTextarea1">
-                         <Form.Label>Order Details</Form.Label>
-                        <Form.Control as="textarea" rows="2" />
-                         </Form.Group>
-                         </Form>
-                         
-                         <div className="TotalPrice">
-                         <p>Total Price:50</p>
-                         {/* <Button onClick={this.props.onHide}>Close</Button> */}
-                         <Button onClick={this.props.onHide}>Confirm Order</Button>
-                         </div>
-                    </Modal.Footer>
-                  </Modal>
-                );
-              }
-            
-        }
-         export default MyVerticallyCenteredModal;
+  
+        <Modal.Body>
+          <h6>Choose cloth</h6>
+
+          <div className="ModalBody-ScrollBar">
+            {this.state.Items.map(order => {
+              return (
+                <div className="ModalBody-ClothBox">
+                  {" "}
+                  <ClothCountBox />
+                </div>
+              );
+            })}
+          </div>
+        </Modal.Body>
+
+        <Modal.Footer className="ModalFooter">
+          <Form>
+            <Form.Group
+              className="ModalSubmitForm"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Order Details</Form.Label>
+              <Form.Control as="textarea" rows="2" />
+            </Form.Group>
+          </Form>
+
+          <div className="TotalPrice">
+            <p>Total Price:50</p>
+            {/* <Button onClick={this.props.onHide}>Close</Button> */}
+            <Button onClick={this.props.onHide}>Confirm Order</Button>
+          </div>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+}
+export default MyVerticallyCenteredModal;
