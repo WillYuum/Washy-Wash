@@ -1,86 +1,67 @@
-import React from "react";
-import { Button, Modal, Form } from "react-bootstrap";
-import "./PopUpModel.scss";
-import ClothCountBox from "./ClothCountBox.js";
-import PopUpSearch from "./PopUpSearch.js";
-class MyVerticallyCenteredModal extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      order: "",
-
-      Items: [
-        {
-          orderNo: 1,
-          noItems: 8,
-          createdAt: "2/4/2015",
-          price: "25$",
-          status: "pending"
-        },
-        {
-          orderNo: 2,
-          noItems: 2,
-          createdAt: "29/7/2019",
-          price: "14$",
-          status: "processing"
-        },
-        {
-          orderNo: 3,
-          noItems: 5,
-          createdAt: "24/8/2018",
-          price: "10$",
-          status: "done"
-        },
-        {
-          orderNo: 4,
-          noItems: 14,
-          createdAt: "20/7/2017",
-          price: "10$",
-          status: "pending"
-        },
-        {
-          orderNo: 5,
-          noItems: 3,
-          createdAt: "24/3/2019",
-          price: "15$",
-          status: "done"
-        },
-        {
-          orderNo: 6,
-          noItems: 25,
-          createdAt: "26/7/2012",
-          price: "10$",
-          status: "processing"
-        },
-        {
-          orderNo: 7,
-          noItems: 9,
-          createdAt: "24/7/2014",
-          price: "30$",
-          status: "done"
-        }
-      ]
-    };
-  }
+import React from 'react';
+import {Button, Modal, Form} from 'react-bootstrap'
+import "./PopUpModel.scss"
+import   ClothCountBox from "./ClothCountBox.js"
+import PopUpSearch from "./PopUpSearch.js"
+import "./ClothCountBox.scss"
+import CounterInput from "react-bootstrap-counter";
+             class MyVerticallyCenteredModal  extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                           
+                        
+                    };
+                }  
+                
+              
+                 render() { 
+                return (
+                  <Modal
+                    {...this.props}
+                    size="lg"
+                    aria-labelledby="contained-modal-title-vcenter"
+                    centered
+                  >
+                    <Modal.Header closeButton>
+                        <div>
+                      <Modal.Title id="contained-modal-title-vcenter">
+                       Customer Name:  <PopUpSearch />
+                      </Modal.Title>
+                        </div>
+                        
+                    </Modal.Header>
+                   
+                    <Modal.Body>
+                    <h6>Choose cloth</h6>
+                        <div className="ModalBody-ScrollBar">
+                        {this.props.ClothDetails.map(Cloth=>{return (
+                        <div className="ModalBody-ClothBox" > 
 
 
-  render() {
-    return (
-      <Modal
-      saveOrder = {this.saveOrderFunc}
-        {...this.props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <div>
-            <Modal.Title id="contained-modal-title-vcenter">
-              Customer Name: <PopUpSearch />
-            </Modal.Title>
-          </div>
-        </Modal.Header>
+                          <div className="ClothCountBox">
+                                      <div className="Photo">
+                                      <img src={Cloth.SRC} alt="Smiley face" height="62" width="80" /> 
+                                      <div className="Details">
+                                          {Cloth.Price}
+                                      </div>
+                                      </div>
+            
+                                    <div className="Counter">
+                                        <CounterInput  min={0} max={10} onChange={ (value) => { console.log(value) } } value={1}  />
+                                    </div>
 
+                          
+                        {/* <ClothCountBox  ClothDetails={this.props.ClothDetails}/> */}
+                        </div>
+                        </div>
+                         )} 
+                         )}
+                        
+                        </div>
+                    </Modal.Body>
+
+  
         <Modal.Body>
           <h6>Choose cloth</h6>
 

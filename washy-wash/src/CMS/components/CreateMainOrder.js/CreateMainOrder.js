@@ -22,7 +22,7 @@ class CreateMainOrder extends React.Component {
                 <h6>Create Order</h6>
             </div>
             <div className="CreateMainOrder">
-            <Link onClick={() => this.setState({modalShow:true})} className="box"> <div > <div className="CreateMainOrder-text"> 1</div></div> </Link>
+            <Link onClick={() => this.setState({modalShow:true, })} className="box"> <div > <div className="CreateMainOrder-text"> 1</div></div> </Link>
             <Link onClick={() => this.setState({modalShow:true})} className="box"> <div > <div className="CreateMainOrder-text"> 2</div></div> </Link>                
             <Link onClick={() => this.setState({modalShow:true})} className="box"> <div > <div className="CreateMainOrder-text"> 3</div></div> </Link>               
             <Link onClick={() => this.setState({modalShow:true})} className="box"> <div > <div className="CreateMainOrder-text"> 4</div></div> </Link>               
@@ -38,6 +38,7 @@ class CreateMainOrder extends React.Component {
       <MyVerticallyCenteredModal
         show={this.state.modalShow}
         onHide={() => this.setState({modalShow:false})}
+        ClothDetails={this.props.ClothDetails}
       />
     
             </div>

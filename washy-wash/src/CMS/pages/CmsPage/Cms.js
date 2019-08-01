@@ -14,52 +14,59 @@ import CmsOrderDetails from "../CmsOrderDetails/CmsOrderDetails.js";
 class Cms extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      ItemsInCMS: [],
+      DataInCMS: []
+    };
   }
+
+  componentWillReceiveProps(newProps) {
+    const ItemsInCMS = newProps.ItemsToCMS;
+    const DataInCMS = newProps.DataToCMS;
+    this.setState({ ItemsInCMS, DataInCMS });newProps.ItemsToCMS
+  }
+
   render() {
     return (
       <div>
-        
         <div className="CMS-Container">
           <div className="SideNav">
             <SideNav />
-            
-
           </div>
-         
-            {/* HERE IS THE MAIN PAGE FOR CMS */}
-            
-            <Switch>
-            <Route  exact path="/" render={ ()=>
-          
-            <div className="MainPage">
-              <div className="MainPage-container">
-                <div className="box">
-                  {" "}
-                  <br /> <CreateMainOrder />
-                </div>
-                <div className="box">
-                  <Customer />
-                </div>
-                <div className="box">
-                  <Employees />
-                </div>
-                <div className="box">
-                  <Cloth />
-                </div>
-              </div>
 
-             
-              
-            </div>
-             } />
+          {/* HERE IS THE MAIN PAGE FOR CMS */}
+
+          <Switch>
             <Route
-              path="/CmsOrderDetails"
-              render={() => <CmsOrderDetails />}
+              exact
+              path="/"
+              render={() => (
+                <div className="MainPage">
+                  <div className="MainPage-container">
+                    <div className="box">
+                      {" "}
+                      <br />{" "}
+                      <CreateMainOrder
+                        MainOrders={this.state.Data}
+                        ClothDetails={this.props.ClothDetails}
+                      />
+                    </div>
+                    <div className="box">
+                      <Customer />
+                    </div>
+                    <div className="box">
+                      <Employees />
+                    </div>
+                    <div className="box">
+                      <Cloth />
+                    </div>
+                  </div>
+                </div>
+              )}
             />
-            </Switch>
+            <Route path="/CmsOrderDetails" render={() => <CmsOrderDetails />} />
+          </Switch>
         </div>
-      
       </div>
     );
   }

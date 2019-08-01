@@ -7,9 +7,9 @@ class ClothCountBox extends React.Component {
         return ( 
         <div className="ClothCountBox">
             <div className="Photo">
-            <img src="https://m.media-amazon.com/images/I/71nsJDgB8QL._AC_UL320_.jpg" alt="Smiley face" height="62" width="80" /> 
+            <img src={this.props.ClothDetails[0].SRC} alt="Smiley face" height="62" width="80" /> 
             <div className="Details">
-                20$
+                {this.props.ClothDetails[0].Price}
             </div>
             </div>
             
