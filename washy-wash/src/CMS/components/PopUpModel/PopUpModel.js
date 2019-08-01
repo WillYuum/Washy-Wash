@@ -1,13 +1,15 @@
-import React from 'react';
-import {Button, Modal, Form} from 'react-bootstrap'
-import "./PopUpModel.scss"
-import   ClothCountBox from "./ClothCountBox.js"
-import PopUpSearch from "./PopUpSearch.js"
-             class MyVerticallyCenteredModal  extends React.Component {
-                constructor(props) {
-                    super(props);
-                    this.state = {
-                            Items: [
+import React from "react";
+import { Button, Modal, Form } from "react-bootstrap";
+import "./PopUpModel.scss";
+import ClothCountBox from "./ClothCountBox.js";
+import PopUpSearch from "./PopUpSearch.js";
+class MyVerticallyCenteredModal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      order: "",
+
+      Items: [
         {
           orderNo: 1,
           noItems: 8,
@@ -58,59 +60,61 @@ import PopUpSearch from "./PopUpSearch.js"
           status: "done"
         }
       ]
-                        
-                    };
-                }  
-                
-              
-                 render() { 
-                return (
-                  <Modal
-                    {...this.props}
-                    size="lg"
-                    aria-labelledby="contained-modal-title-vcenter"
-                    centered
-                  >
-                    <Modal.Header closeButton>
-                        <div>
-                      <Modal.Title id="contained-modal-title-vcenter">
-                       Customer Name:  <PopUpSearch />
-                      </Modal.Title>
-                        </div>
-                        
-                    </Modal.Header>
-                   
-                    <Modal.Body>
-                    <h6>Choose cloth</h6>
+    };
+  }
 
-                        <div className="ModalBody-ScrollBar">
-                        {this.state.Items.map(order=>{ return (
-                        <div className="ModalBody-ClothBox" > <ClothCountBox />
-                        </div>)
-                        } 
-                         )}
-                        </div>
-                    </Modal.Body>
 
-                    <Modal.Footer className="ModalFooter">
-                        
-                        <Form >
-                        
-                         <Form.Group className="ModalSubmitForm" controlId="exampleForm.ControlTextarea1">
-                         <Form.Label>Order Details</Form.Label>
-                        <Form.Control as="textarea" rows="2" />
-                         </Form.Group>
-                         </Form>
-                         
-                         <div className="TotalPrice">
-                         <p>Total Price:50</p>
-                         {/* <Button onClick={this.props.onHide}>Close</Button> */}
-                         <Button onClick={this.props.onHide}>Confirm Order</Button>
-                         </div>
-                    </Modal.Footer>
-                  </Modal>
-                );
-              }
-            
-        }
-         export default MyVerticallyCenteredModal;
+  render() {
+    return (
+      <Modal
+      saveOrder = {this.saveOrderFunc}
+        {...this.props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <div>
+            <Modal.Title id="contained-modal-title-vcenter">
+              Customer Name: <PopUpSearch />
+            </Modal.Title>
+          </div>
+        </Modal.Header>
+
+        <Modal.Body>
+          <h6>Choose cloth</h6>
+
+          <div className="ModalBody-ScrollBar">
+            {this.state.Items.map(order => {
+              return (
+                <div className="ModalBody-ClothBox">
+                  {" "}
+                  <ClothCountBox />
+                </div>
+              );
+            })}
+          </div>
+        </Modal.Body>
+
+        <Modal.Footer className="ModalFooter">
+          <Form>
+            <Form.Group
+              className="ModalSubmitForm"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Order Details</Form.Label>
+              <Form.Control as="textarea" rows="2" />
+            </Form.Group>
+          </Form>
+
+          <div className="TotalPrice">
+            <p>Total Price:50</p>
+            {/* <Button onClick={this.props.onHide}>Close</Button> */}
+            <Button onClick={this.props.onHide}>Confirm Order</Button>
+          </div>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+}
+export default MyVerticallyCenteredModal;
