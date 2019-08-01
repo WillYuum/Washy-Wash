@@ -23,6 +23,7 @@ class ViewOrders extends React.Component {
       // NumberOfItems:this.props.location.state.Items.noItems,
       // TimeCreated:this.props.location.state.Items.createdAt,
       // ThePrice:this.props.location.state.Items.price,
+      
     };
   }
   // handdleChange= event => {
