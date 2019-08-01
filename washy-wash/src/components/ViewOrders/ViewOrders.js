@@ -3,6 +3,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
+import "./ViewOrders.css";
 import {
   Button,
   Table,
@@ -11,44 +12,57 @@ import {
   ToggleButton
 } from "react-bootstrap";
 
-import "./ViewOrders.css";
+/**
+ *
+ *
+ *
+ * ViewOrders a box of the orders
+ *
+ *
+ *
+ *@module ViewOrders
+ *
+ * */
 
 class ViewOrders extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      CurrentCategory:"processing"
-      // Items: this.props.Items
-      // orderNumber:this.props.location.state.Items.orderNo,
-      // NumberOfItems:this.props.location.state.Items.noItems,
-      // TimeCreated:this.props.location.state.Items.createdAt,
-      // ThePrice:this.props.location.state.Items.price,
+      CurrentCategory: "processing"
     };
   }
-  // handdleChange= event => {
-  //      if (this.props.Items)
-  // };
 
+  
+
+  /**  * @function   ViewOrders
+   * @prop {function} numberItem prop brought from MyOrders.js(Parent) that holds a function
+   *  to send data back to MyOrders(Parent)
+   * 
+   *  */
+  
   render() {
     return (
       <div>
         <div>
           <ButtonToolbar className="ViewOrders-StatusNav">
             <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
-              <ToggleButton
-                name="Pending"
-              >
-                <a onClick={()=>this.setState({CurrentCategory:"pending"})}>
-                Pending
+              <ToggleButton name="Pending">
+                <a
+                  onClick={() => this.setState({ CurrentCategory: "pending" })}
+                >
+                  Pending
                 </a>
               </ToggleButton>
               <ToggleButton
-                onClick={()=>this.setState({CurrentCategory:"processing"})}
+                onClick={() => this.setState({ CurrentCategory: "processing" })}
                 name="Procesing"
               >
                 Processing
               </ToggleButton>
-              <ToggleButton onClick={()=>this.setState({CurrentCategory:"done"})} name="Done">
+              <ToggleButton
+                onClick={() => this.setState({ CurrentCategory: "done" })}
+                name="Done"
+              >
                 Done
               </ToggleButton>
             </ToggleButtonGroup>
@@ -56,9 +70,9 @@ class ViewOrders extends React.Component {
         </div>
         <br /> <br />
         <div className="ViewOrders-Scrollbar">
-          {this.props.Item.map(order=>{
-            if(order.status === this.state.CurrentCategory){
-              return(
+          {this.props.Item.map(order => {
+            if (order.status === this.state.CurrentCategory) {
+              return (
                 <div>
                   <Card className="ViewOrders-Card">
                     <Card.Body>
@@ -96,8 +110,7 @@ class ViewOrders extends React.Component {
                 </div>
               );
             }
-          })
-        }
+          })}
         </div>
       </div>
     );
@@ -105,4 +118,3 @@ class ViewOrders extends React.Component {
 }
 
 export default ViewOrders;
-
