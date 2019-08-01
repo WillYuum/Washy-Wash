@@ -8,7 +8,7 @@ import { Route, Link, Switch, withRouter } from "react-router-dom";
 
 class App extends React.Component {
   state = {
-    loggedIn: true
+    loggedIn: false
   };
   render() {
     return (
