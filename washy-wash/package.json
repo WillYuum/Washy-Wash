@@ -12,12 +12,15 @@
     "re-carousel": "^2.3.1",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
+    "react-bootstrap-counter": "^1.0.1",
     "react-bootstrap-table-next": "^3.1.7",
     "react-bootstrap-table2-editor": "^1.3.1",
+    "react-cookie-consent": "^2.3.2",
     "react-dom": "^16.8.6",
     "react-rater": "^5.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-search-box": "^2.0.1",
     "react-slick": "^0.24.0",
     "react-star-ratings": "^2.3.0",
     "react-sticky-footer": "0.1.0-rc3",
@@ -29,7 +32,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docs": "jsdoc src -r -d docs"
   },
   "eslintConfig": {
     "extends": "react-app"
