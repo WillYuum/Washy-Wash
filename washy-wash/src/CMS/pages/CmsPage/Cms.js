@@ -23,7 +23,7 @@ class Cms extends React.Component {
   componentWillReceiveProps(newProps) {
     const ItemsInCMS = newProps.ItemsToCMS;
     const DataInCMS = newProps.DataToCMS;
-    this.setState({ ItemsInCMS, DataInCMS });newProps.ItemsToCMS
+    this.setState({ ItemsInCMS, DataInCMS });
   }
 
   render() {
