@@ -2,39 +2,33 @@ import "./CustomerMain.scss";
 
 import React from "react";
 import MaterialTable from "material-table";
+import { resolveSoa } from "dns";
 
-export default function CustomerMain() {
+export default function CustomerMain({ UseCustomerData }) {
   const [state, setState] = React.useState({
     columns: [
-      { title: "Name", field: "name" },
-      { title: "Surname", field: "surname" },
-      { title: "Birth Year", field: "birthYear", type: "numeric" },
-      {
-        title: "Birth Place",
-        field: "birthCity",
-        lookup: { 34: "İstanbul", 63: "Şanlıurfa" }
-      }
+      { title: "FirstName", field: "first_name" },
+      { title: "MiddleName", field: "middle_name" },
+      { title: "LastName", field: "last_name" },
+      { title: "Email", field: "email" },
+      { title: "Roles", field: "roles" }
     ],
-    data: [
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Ali", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      {
-        name: "Zerya Betül",
-        surname: "Baran",
-        birthYear: 2017,
-        birthCity: 34
+    data: UseCustomerData.map(
+      ({ first_name, last_name, middle_name, email,roles }) => {
+       
+          return {
+            first_name,
+            middle_name,
+            last_name,
+            email,
+            roles,
+          };
+      
       }
-    ]
+    )
   });
+
+  console.log("I'm WORKING HERE", UseCustomerData);
 
   return (
     <div className="CustomerMain-Container">
@@ -75,3 +69,4 @@ export default function CustomerMain() {
     </div>
   );
 }
+// lookup: { 34: "İstanbul", 63: "Şanlıurfa" }
