@@ -9,11 +9,14 @@ import { Route, Link, Switch, withRouter } from "react-router-dom";
 class App extends React.Component {
   state = {
     loggedIn: false,
-    Customer: []
+    Customer: [],
+    cloth: []
+
   };
 
   async componentDidMount() {
     this.getUsers();
+    this.getcloth();
   }
 
   getUsers = async () => {
@@ -32,7 +35,33 @@ class App extends React.Component {
       console.log("it didn't work :(");
       console.log(err);
     }
+
+
+
   };
+
+  getcloth = async () => {
+    try {
+      const req = await fetch("http://localhost:8000/api/v1/items-types", {
+        method: "GET",
+        headers:{
+          "Authorization": `Bearer ${localStorage.getItem("token")}`,
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+      }
+      });
+      const res = await req.json();
+      console.log("cloth DATA===============>", res);
+      this.setState({cloth:res})
+    } catch (err) {
+      console.log("it didn't work :(");
+      console.log(err);
+    }
+
+
+    
+  };
+
 
   render() {
     return (
