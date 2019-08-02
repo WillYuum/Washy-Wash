@@ -11,58 +11,102 @@ class App extends React.Component {
     loggedIn: false,
     Customer: [],
     cloth: []
-
   };
 
   async componentDidMount() {
     this.getUsers();
     this.getcloth();
   }
-
+  //--------------------- USERS CRUD ---------------------------------------------
   getUsers = async () => {
     try {
       const req = await fetch("http://localhost:8000/api/v1/users", {
         method: "GET",
-        headers:{
-          "Authorization": `Bearer ${localStorage.getItem("token")}`,
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-      }
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
       });
       const res = await req.json();
-      this.setState({Customer: req.data})
-      console.log(this.state.Customer)
+      this.setState({ Customer: res.data });
+      this.setState({loggedIn: true})
+      console.log("here",this.state.Customer);
     } catch (err) {
       console.log("it didn't work :(");
       console.log(err);
     }
-
-
-
   };
+
+  CreateUser = async params => {
+    try {
+      let {
+        first_name,
+        last_name,
+        middle_name,
+        email,
+        password,
+        roles
+      } = params;
+      let body = {
+        first_name: first_name,
+        last_name: last_name,
+        middle_name: middle_name,
+        email: email,
+        password: password,
+        roles: roles
+      };
+      const req = await fetch("http://localhost:8000/api/v1/users", {
+        method: "POST",
+
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(body)
+      });
+    } catch (err) {
+      console.log("creating user ====>", err);
+    }
+  };
+
+  addUser = async ({
+    first_name,
+    last_name,
+    middle_name,
+    email,
+    password,
+    roles
+  }) => {
+    let user = await this.CreateUser({first_name,
+      last_name,
+      middle_name,
+      email,
+      password,
+      roles})
+      let newUser = await [...this.state.Customer,user]
+  };
+  //------------------------------USERS CRUD ---------------------------------
 
   getcloth = async () => {
     try {
       const req = await fetch("http://localhost:8000/api/v1/items-types", {
         method: "GET",
-        headers:{
-          "Authorization": `Bearer ${localStorage.getItem("token")}`,
-          "Accept": "application/json",
-          "Content-Type": "application/json",
-      }
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
       });
       const res = await req.json();
       console.log("cloth DATA===============>", res);
-      this.setState({cloth:res})
+      this.setState({ cloth: res.data });
     } catch (err) {
       console.log("it didn't work :(");
       console.log(err);
     }
-
-
-    
   };
-
 
   render() {
     return (
@@ -75,9 +119,7 @@ class App extends React.Component {
                 console.log("You are in cms");
                 return (
                   <CMS
-                    ItemsToCMS={this.state.Items}
-                    DataToCMS={this.state.Data}
-                    ClothDetails={this.state.ClothDetails}
+                    CustomersData={this.state.Customer}
                   />
                 );
               }

@@ -47,13 +47,13 @@ class Cms extends React.Component {
                     <div className="box">
                       {" "}
                       <br />{" "}
-                      <CreateMainOrder
-                        MainOrders={this.state.Data}
-                        ClothDetails={this.props.ClothDetails}
-                      />
+                      {/* <CreateMainOrder
+                        // MainOrders={this.state.Data}
+                        // ClothDetails={this.props.ClothDetails}
+                      /> */}
                     </div>
                     <div className="box">
-                      <Customer />
+                      <Customer UseCustomerData={this.props.CustomersData}/>
                     </div>
                     <div className="box">
                       <Employees />
