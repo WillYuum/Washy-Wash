@@ -27,12 +27,19 @@ class App extends React.Component {
       }
       });
       const res = await req.json();
-      console.log("Cutomers DATA===============>", res);
+      this.setState({Customer: req.data})
+      console.log(this.state.Customer)
     } catch (err) {
       console.log("it didn't work :(");
       console.log(err);
     }
   };
+
+
+  
+
+
+
 
   render() {
     return (
