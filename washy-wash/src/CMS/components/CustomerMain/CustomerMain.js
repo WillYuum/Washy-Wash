@@ -21,7 +21,7 @@ export default function CustomerMain({ UseCustomerData }) {
             middle_name,
             last_name,
             email,
-            roles,
+          
           };
       
       }

@@ -59,7 +59,9 @@ class Cms extends React.Component {
                       <Employees />
                     </div>
                     <div className="box">
-                      <Cloth />
+                      <Cloth
+                      clotheDataUse={this.props.clothData}
+                      />
                     </div>
                   </div>
                 </div>
