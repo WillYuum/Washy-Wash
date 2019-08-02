@@ -9,8 +9,8 @@ class Hero extends React.Component {
     super(props);
     this.state = {
       email: "",
-      password: "",
-    }
+      password: ""
+    };
   }
 
   getToken = async (email, password) => {
@@ -21,33 +21,33 @@ class Hero extends React.Component {
       const req = await fetch("http://localhost:8000/api/login", {
         method: "POST",
         body
-      })
+      });
       const res = await req.json();
-      console.log("HERE===============>", res.token)
-      localStorage.setItem(res.token)
+      console.log("HERE===============>", res.token);
+      localStorage.setItem("token", res.token);
     } catch (err) {
-      console.log("it didn't work :(")
+      console.log("it didn't work :(");
       console.log(err);
     }
-  }
+  };
 
-  handleChange = (e) => {
+  handleChange = e => {
     e.preventDefault();
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   onSubmit = () => {
     let { email, password } = this.state;
     this.getToken(email, password);
-    this.setState({ email: "", password: "" })
-  }
+    this.setState({ email: "", password: "" });
+  };
 
   render() {
     return (
       <div>
         <CookieConsent>
           This website uses cookies to enhance the user experience.
-</CookieConsent>
+        </CookieConsent>
         <CookieConsent
           location="bottom"
           buttonText="I accept"
@@ -59,7 +59,7 @@ class Hero extends React.Component {
           This website uses cookies to enhance the user experience.{" "}
           <span style={{ fontSize: "10px" }}>
             This bit of text is smaller :O
-    </span>
+          </span>
         </CookieConsent>
         <div className="bg-img">
           <form className="containerhero">
@@ -67,7 +67,14 @@ class Hero extends React.Component {
             <label htmlFor="email">
               <b>Email</b>
             </label>
-            <input type="text" placeholder="Enter Email" name="email" value={this.state.email} onChange={this.handleChange} required />
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
             <label htmlFor="psw">
               <b>Password</b>
             </label>
@@ -79,17 +86,21 @@ class Hero extends React.Component {
               onChange={this.handleChange}
               required
             />
-            <center> <button onClick={this.onSubmit} className="btn">
-              Sign In</button></center>
+            <center>
+              {" "}
+              <button onClick={this.onSubmit} className="btn">
+                Sign In
+              </button>
+            </center>
             <center>
               <p>
-                Dont't have an acount?  <Link to="/SignUp">Sign Up</Link>
-              </p></center>
+                Dont't have an acount? <Link to="/SignUp">Sign Up</Link>
+              </p>
+            </center>
           </form>
-
         </div>
       </div>
-    )
+    );
   }
 }
 export default Hero;

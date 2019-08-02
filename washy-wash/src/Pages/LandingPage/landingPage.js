@@ -10,6 +10,7 @@ import Footer from "../../components/Footer/Footer";
 import MyOrders from "../../Pages/MyOrders/MyOrders.js";
 import ContactUs from "../Contact-Us/ContactUs.js";
 import SignUp from "../../Pages/SignUp/SignUp.js";
+import CookieConsent, { Cookies } from "react-cookie-consent";
 import Main from "../MainPage/Main.js";
 
 class LandingPage extends React.Component {
