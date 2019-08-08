@@ -90,7 +90,7 @@ const Services = () => {
 
   return (
     <div>
-      {/* <Jumbotron> */}
+      <Jumbotron>
         <center>
           <h1>Our Services</h1>
         </center>
@@ -117,7 +117,7 @@ const Services = () => {
             </Slider>
           </Row>
         </Container>
-      {/* </Jumbotron> */}
+      </Jumbotron>
 
       
     </div>

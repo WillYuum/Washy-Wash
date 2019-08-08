@@ -3,38 +3,35 @@ import "./ClothTypeMain.scss";
 import React from "react";
 import MaterialTable from "material-table";
 
-export default function Cloth() {
+export default function Cloth({clotheDataUse}) {
   const [state, setState] = React.useState({
     columns: [
-      { title: "Name", field: "name" },
-      { title: "Surname", field: "surname" },
-      { title: "Birth Year", field: "birthYear", type: "numeric" },
-      {
-        title: "Birth Place",
-        field: "birthCity",
-        lookup: { 34: "İstanbul", 63: "Şanlıurfa" }
-      }
+      { title: "Title", field: "title" },
+      { title: "Price", field: "price" }
+
+
     ],
-    data: [
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Ali", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-      {
-        name: "Zerya Betül",
-        surname: "Baran",
-        birthYear: 2017,
-        birthCity: 34
+    data: clotheDataUse.map(
+      ({ title, price }) => {
+        return {
+          title,
+          price,
+        };
+
+
+
+
       }
-    ]
+    )
   });
+  console.log("i' am working Headers", clotheDataUse);
+
+
+
+
+
+
+
 
   return (
     <div className="ClothTypeMain-Container">

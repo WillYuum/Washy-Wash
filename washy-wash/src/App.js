@@ -105,7 +105,7 @@ class App extends React.Component {
       });
       const res = await req.json();
       console.log("cloth DATA===============>", res);
-      this.setState({ cloth: res.data });
+      this.setState({ cloth: res });
     } catch (err) {
       console.log("it didn't work :(");
       console.log(err);
