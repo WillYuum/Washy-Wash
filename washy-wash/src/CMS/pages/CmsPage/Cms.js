@@ -53,7 +53,7 @@ class Cms extends React.Component {
                       /> */}
                     </div>
                     <div className="box">
-                      <Customer UseCustomerData={this.props.CustomersData}/>
+                      <Customer CustomersData={this.props.CustomersData} UseCreateCustomer={this.props.createUserFunc}/>
                     </div>
                     <div className="box">
                       <Employees />

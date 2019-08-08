@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.3.1",
     "bootstrap": "^4.3.1",
     "csstools": "^0.1.5",
     "lodash": "^4.17.15",
     "material-table": "^1.40.1",
+    "material-ui": "^0.20.2",
     "node-sass": "^4.12.0",
     "normalize.css": "^8.0.1",
     "re-carousel": "^2.3.1",

@@ -1,19 +1,28 @@
 import React from "react";
-import LandingPage from "./Pages/LandingPage/landingPage";
-import Myorders from "./Pages/MyOrders/MyOrders";
-
-import Main from "./Pages/MainPage/Main.js";
-import CMS from "./CMS/pages/CmsPage/Cms.js";
 import { Route, Link, Switch, withRouter } from "react-router-dom";
 
-class App extends React.Component {
-  state = {
-    loggedIn: false,
-    Customer: [],
-    cloth: []
-  };
+import CMS from "./CMS/pages/CmsPage/Cms.js";
+import LandingPage from "./Pages/LandingPage/landingPage";
+import { isPipelinePrimaryTopicReference } from "@babel/types";
 
-  async componentDidMount() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loggedIn: false,
+      Customer: [],
+      cloth: []
+    };
+    console.log("CHECK SOMETHING HERE", this.props);
+    console.log("Customers", this.state.Customer);
+  }
+
+  componentWillMount() {
+    const token = localStorage.getItem("token");
+    if (token) this.setState({ token });
+  }
+
+  componentDidMount() {
     this.getUsers();
     this.getcloth();
   }
@@ -30,8 +39,8 @@ class App extends React.Component {
       });
       const res = await req.json();
       this.setState({ Customer: res.data });
-      this.setState({loggedIn: true})
-      console.log("here",this.state.Customer);
+      this.setState({ loggedIn: true });
+      console.log("here", this.state.Customer);
     } catch (err) {
       console.log("it didn't work :(");
       console.log(err);
@@ -40,22 +49,15 @@ class App extends React.Component {
 
   CreateUser = async params => {
     try {
-      let {
-        first_name,
-        last_name,
-        middle_name,
-        email,
-        password,
-        roles
-      } = params;
       let body = {
-        first_name: first_name,
-        last_name: last_name,
-        middle_name: middle_name,
-        email: email,
-        password: password,
-        roles: roles
+        first_name: params.newData.first_name,
+        middle_name: params.newData.middle_name,
+        last_name: params.newData.last_name,
+        email: params.newData.email,
+        password: params.newData.password,
+        roles: [1]
       };
+      console.log(body);
       const req = await fetch("http://localhost:8000/api/v1/users", {
         method: "POST",
 
@@ -66,27 +68,29 @@ class App extends React.Component {
         },
         body: JSON.stringify(body)
       });
+      const answer = await req.json();
+      console.log(answer);
+      if (answer.success) {
+        const customers = [...this.state.Customer, ...answer.data];
+        this.setState({ Customer: customers });
+      }
     } catch (err) {
       console.log("creating user ====>", err);
     }
   };
 
-  addUser = async ({
-    first_name,
-    last_name,
-    middle_name,
-    email,
-    password,
-    roles
-  }) => {
-    let user = await this.CreateUser({first_name,
-      last_name,
-      middle_name,
-      email,
-      password,
-      roles})
-      let newUser = await [...this.state.Customer,user]
-  };
+  // addUser = async ({
+  //   first_name,
+  //   last_name,
+  //   middle_name,
+  //   email,
+  // }) => {
+  //   let user = await this.CreateUser({first_name,
+  //     last_name,
+  //     middle_name,
+  //     email,})
+  //     let newUser = await [...this.state.Customer,user]
+  // };
   //------------------------------USERS CRUD ---------------------------------
 
   getcloth = async () => {
@@ -109,23 +113,23 @@ class App extends React.Component {
   };
 
   render() {
+    const { token, Customer } = this.state;
+
+    if (token) {
+      return (
+        <Route
+          path="/"
+          render={() => (
+            <CMS CustomersData={Customer} createUserFunc={this.CreateUser} />
+          )}
+        />
+      );
+    }
+
     return (
       <div>
         <Switch>
-          <Route
-            path="/"
-            render={() => {
-              if (this.state.loggedIn) {
-                console.log("You are in cms");
-                return (
-                  <CMS
-                    CustomersData={this.state.Customer}
-                  />
-                );
-              }
-              return <LandingPage />;
-            }}
-          />
+          <Route path="/" component={LandingPage} />
         </Switch>
       </div>
     );

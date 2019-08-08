@@ -2,34 +2,39 @@ import "./CustomerMain.scss";
 
 import React from "react";
 import MaterialTable from "material-table";
-import { resolveSoa } from "dns";
+import { resolveSoa, lookup } from "dns";
 
-export default function CustomerMain({ UseCustomerData }) {
+export default function CustomerMain({ CustomersData, UseCreateCustomer }) {
   const [state, setState] = React.useState({
     columns: [
       { title: "FirstName", field: "first_name" },
       { title: "MiddleName", field: "middle_name" },
       { title: "LastName", field: "last_name" },
       { title: "Email", field: "email" },
-      { title: "Roles", field: "roles" }
-    ],
-    data: UseCustomerData.map(
-      ({ first_name, last_name, middle_name, email,roles }) => {
-       
-          return {
-            first_name,
-            middle_name,
-            last_name,
-            email,
-            roles,
-          };
+      { title: "Password", field: "password" },
       
+    ],
+    data: CustomersData.map(
+      ({ first_name, last_name, middle_name, email, password}) => {
+        console.log("the mapping started")
+        console.log("the customers properties" ,first_name,
+        last_name,
+        middle_name,
+        email);
+        return {
+          first_name,
+          last_name,
+          middle_name,
+          email,
+          password
+      
+        };
       }
     )
   });
 
-  console.log("I'm WORKING HERE", UseCustomerData);
-
+  console.log("I'm WORKING HERE", CustomersData);
+  console.log("state", state.data)
   return (
     <div className="CustomerMain-Container">
       <MaterialTable
@@ -41,9 +46,8 @@ export default function CustomerMain({ UseCustomerData }) {
             new Promise(resolve => {
               setTimeout(() => {
                 resolve();
-                const data = [...state.data];
-                data.push(newData);
-                setState({ ...state, data });
+                UseCreateCustomer({newData})
+                console.log("check resolve",resolve)
               }, 600);
             }),
           onRowUpdate: (newData, oldData) =>
