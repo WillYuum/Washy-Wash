@@ -19,6 +19,7 @@ class LandingPage extends React.Component {
     this.state = {};
   }
   render() {
+    let { getToken } = this.props;
     return (
       <div>
         <NavigationBar />
@@ -26,8 +27,7 @@ class LandingPage extends React.Component {
         {
           <Switch>
             <Route exact path="/">
-     
-              <Main />
+              <Main getToken={getToken}/>
             </Route>
             <Route
               path="/contactus"

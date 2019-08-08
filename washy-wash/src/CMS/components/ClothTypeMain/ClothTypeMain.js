@@ -3,35 +3,20 @@ import "./ClothTypeMain.scss";
 import React from "react";
 import MaterialTable from "material-table";
 
-export default function Cloth({clotheDataUse}) {
+export default function Cloth({ clotheDataUse }) {
   const [state, setState] = React.useState({
     columns: [
       { title: "Title", field: "title" },
       { title: "Price", field: "price" }
-
-
     ],
-    data: clotheDataUse.map(
-      ({ title, price }) => {
-        return {
-          title,
-          price,
-        };
-
-
-
-
-      }
-    )
+    data: clotheDataUse.map(({ title, price }) => {
+      return {
+        title,
+        price
+      };
+    })
   });
   console.log("i' am working Headers", clotheDataUse);
-
-
-
-
-
-
-
 
   return (
     <div className="ClothTypeMain-Container">

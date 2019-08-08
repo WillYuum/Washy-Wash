@@ -11,30 +11,21 @@ export default function CustomerMain({ CustomersData, UseCreateCustomer }) {
       { title: "MiddleName", field: "middle_name" },
       { title: "LastName", field: "last_name" },
       { title: "Email", field: "email" },
-      { title: "Password", field: "password" },
-      
+      { title: "Password", field: "password" }
     ],
     data: CustomersData.map(
-      ({ first_name, last_name, middle_name, email, password}) => {
-        console.log("the mapping started")
-        console.log("the customers properties" ,first_name,
-        last_name,
-        middle_name,
-        email);
+      ({ first_name, last_name, middle_name, email, password }) => {
         return {
           first_name,
           last_name,
           middle_name,
           email,
           password
-      
         };
       }
     )
   });
 
-  console.log("I'm WORKING HERE", CustomersData);
-  console.log("state", state.data)
   return (
     <div className="CustomerMain-Container">
       <MaterialTable
@@ -46,8 +37,8 @@ export default function CustomerMain({ CustomersData, UseCreateCustomer }) {
             new Promise(resolve => {
               setTimeout(() => {
                 resolve();
-                UseCreateCustomer({newData})
-                console.log("check resolve",resolve)
+                UseCreateCustomer({ newData });
+                console.log("check resolve", resolve);
               }, 600);
             }),
           onRowUpdate: (newData, oldData) =>

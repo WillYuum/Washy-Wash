@@ -1,7 +1,7 @@
-import React from 'react';
-import Hero from "../../components/Hero/Hero.js"
-import HowWeWork from "../../components/HowWeWork/HowWeWork.js"
-import Services from "../../components/Services/Services.js"
+import React from "react";
+import Hero from "../../components/Hero/Hero.js";
+import HowWeWork from "../../components/HowWeWork/HowWeWork.js";
+import Services from "../../components/Services/Services.js";
 
 class Main extends React.Component {
   constructor(props) {
@@ -9,9 +9,10 @@ class Main extends React.Component {
     this.state = {};
   }
   render() {
+    let {getToken} = this.props
     return (
       <div>
-        <Hero />
+        <Hero  getToken={getToken}/>
         <HowWeWork />
         <Services />
       </div>

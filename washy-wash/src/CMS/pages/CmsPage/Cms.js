@@ -1,7 +1,7 @@
 import React from "react";
-import "./Cms.scss";
-
 import { Redirect, Route, Link, Switch, withRouter } from "react-router-dom";
+
+import "./Cms.scss";
 
 import SideNav from "../../components/SideNav/SideNav.js";
 import CreateMainOrder from "../../components/CreateMainOrder.js/CreateMainOrder.js";
@@ -28,11 +28,12 @@ class Cms extends React.Component {
   }
 
   render() {
+    let { emptyToken } = this.props;
     return (
       <div>
         <div className="CMS-Container">
           <div className="SideNav">
-            <SideNav />
+            <SideNav emptyToken={emptyToken} />
           </div>
 
           {/* HERE IS THE MAIN PAGE FOR CMS */}
@@ -45,23 +46,23 @@ class Cms extends React.Component {
                 <div className="MainPage">
                   <div className="MainPage-container">
                     <div className="box">
-                      {" "}
-                      <br />{" "}
+                      <br />
                       {/* <CreateMainOrder
                         // MainOrders={this.state.Data}
                         // ClothDetails={this.props.ClothDetails}
                       /> */}
                     </div>
                     <div className="box">
-                      <Customer CustomersData={this.props.CustomersData} UseCreateCustomer={this.props.createUserFunc}/>
+                      <Customer
+                        CustomersData={this.props.CustomersData}
+                        UseCreateCustomer={this.props.createUserFunc}
+                      />
                     </div>
                     <div className="box">
                       <Employees />
                     </div>
                     <div className="box">
-                      <Cloth
-                      clotheDataUse={this.props.clothData}
-                      />
+                      {/* <Cloth clotheDataUse={this.props.clotheDataUse} /> */}
                     </div>
                   </div>
                 </div>

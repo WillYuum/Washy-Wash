@@ -8,19 +8,27 @@ class SideNav extends React.Component {
     this.state = {};
   }
   render() {
+    let {emptyToken} = this.props;
     return (
-      <div   >
-          <div className="SideNav-flex-container">
-        <Nav defaultActiveKey="/home" className="SideNav-flex-column">
-       <Nav.Link  to="/" >Home</Nav.Link> 
-          <Nav.Link eventKey="link-1">Setting</Nav.Link>
-          <Nav.Link eventKey="link-2">Logout</Nav.Link>
-          <ButtonToolbar >
-           <Link to={'/CmsOrderDetails'}><Button className="SideNav-Edit" variant="primary">Edit Order  </Button></Link>
-          <Button className="SideNav-AuditLogger" variant="primary">Audit Logger</Button>
-          </ButtonToolbar>
-        </Nav>
-      </div>
+      <div>
+        <button onClick={emptyToken}>Logout</button>
+        <div className="SideNav-flex-container">
+          <Nav defaultActiveKey="/home" className="SideNav-flex-column">
+            <Nav.Link to="/">Home</Nav.Link>
+            <Nav.Link eventKey="link-1">Setting</Nav.Link>
+            <Nav.Link eventKey="link-2">LOGOUT</Nav.Link>
+            <ButtonToolbar>
+              <Link to={"/CmsOrderDetails"}>
+                <Button className="SideNav-Edit" variant="primary">
+                  Edit Order{" "}
+                </Button>
+              </Link>
+              <Button className="SideNav-AuditLogger" variant="primary">
+                Audit Logger
+              </Button>
+            </ButtonToolbar>
+          </Nav>
+        </div>
       </div>
     );
   }

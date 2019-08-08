@@ -3,7 +3,6 @@ import { Route, Link, Switch, withRouter } from "react-router-dom";
 
 import CMS from "./CMS/pages/CmsPage/Cms.js";
 import LandingPage from "./Pages/LandingPage/landingPage";
-import { isPipelinePrimaryTopicReference } from "@babel/types";
 
 class App extends React.Component {
   constructor(props) {
@@ -11,13 +10,15 @@ class App extends React.Component {
     this.state = {
       loggedIn: false,
       Customer: [],
-      cloth: []
+      cloth: [],
+      token: ""
     };
     console.log("CHECK SOMETHING HERE", this.props);
     console.log("Customers", this.state.Customer);
   }
 
   componentWillMount() {
+    console.log("I have token");
     const token = localStorage.getItem("token");
     if (token) this.setState({ token });
   }
@@ -26,6 +27,22 @@ class App extends React.Component {
     this.getUsers();
     this.getcloth();
   }
+
+  /**
+   * @function getToken it's role is to get the token from Hero.js(Child) to App so I can be able to login to CMS.
+   * @param {string} token it's the token I want to take from LandingPage.js <-- MainPage.js <-- Hero.js.
+   */
+  getToken = token => {
+    this.setState({ token });
+  };
+
+  
+  /**
+   * @function emptyToken it's role is to delete token using the button which is in CMS.js --> SideNav.js.
+   */
+  emptyToken = () => {
+    this.setState({token:""})
+  };
   //--------------------- USERS CRUD ---------------------------------------------
   getUsers = async () => {
     try {
@@ -39,8 +56,7 @@ class App extends React.Component {
       });
       const res = await req.json();
       this.setState({ Customer: res.data });
-      this.setState({ loggedIn: true });
-      console.log("here", this.state.Customer);
+      console.log("Customer State", this.state.Customer);
     } catch (err) {
       console.log("it didn't work :(");
       console.log(err);
@@ -75,24 +91,13 @@ class App extends React.Component {
         this.setState({ Customer: customers });
       }
     } catch (err) {
-      console.log("creating user ====>", err);
+      console.log("creating user didn't work ====>", err);
     }
   };
 
-  // addUser = async ({
-  //   first_name,
-  //   last_name,
-  //   middle_name,
-  //   email,
-  // }) => {
-  //   let user = await this.CreateUser({first_name,
-  //     last_name,
-  //     middle_name,
-  //     email,})
-  //     let newUser = await [...this.state.Customer,user]
-  // };
   //------------------------------USERS CRUD ---------------------------------
 
+  //------------------------------CLOTHS CRUD---------------------------------
   getcloth = async () => {
     try {
       const req = await fetch("http://localhost:8000/api/v1/items-types", {
@@ -107,32 +112,41 @@ class App extends React.Component {
       console.log("cloth DATA===============>", res);
       this.setState({ cloth: res });
     } catch (err) {
-      console.log("it didn't work :(");
+      console.log("Get Cloth didn't work :(");
       console.log(err);
     }
   };
 
+  //------------------------------CLOTHS CRUD---------------------------------
+
   render() {
-    const { token, Customer } = this.state;
+    //this helps not use {this.state.Customer} || {this.state.cloth}
+    const { token, Customer, cloth} = this.state;
 
     if (token) {
       return (
         <Route
           path="/"
           render={() => (
-            <CMS CustomersData={Customer} createUserFunc={this.CreateUser} />
+            <CMS
+              CustomersData={Customer}
+              clotheDataUse={cloth}
+              createUserFunc={this.CreateUser}
+              emptyToken={this.emptyToken}
+              
+            />
           )}
         />
       );
+    } else {
+      return (
+        <div>
+          <Switch>
+            <Route path="/" render={()=><LandingPage getToken={this.getToken}/>} />
+          </Switch>
+        </div>
+      );
     }
-
-    return (
-      <div>
-        <Switch>
-          <Route path="/" component={LandingPage} />
-        </Switch>
-      </div>
-    );
   }
 }
 

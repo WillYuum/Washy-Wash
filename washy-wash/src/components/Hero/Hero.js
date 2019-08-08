@@ -1,8 +1,8 @@
 import React from "react";
-import { Jumbotron, Button } from "react-bootstrap";
-import "./Hero.scss";
 import { Link } from "react-router-dom";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+
+import "./Hero.scss";
 
 class Hero extends React.Component {
   constructor(props) {
@@ -23,10 +23,10 @@ class Hero extends React.Component {
         body
       });
       const res = await req.json();
-      console.log("HERE===============>", res.token);
-      localStorage.setItem("token", res.token);
+      console.log("TOKEN===============>", res.token);
+      this.props.getToken(res.token)
     } catch (err) {
-      console.log("it didn't work :(");
+      console.log("Get Token didn't work :(");
       console.log(err);
     }
   };
